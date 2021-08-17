@@ -1,368 +1,286 @@
 <!DOCTYPE html>
-<html lang="en">
 
 <head>
-    <!--Meta Info-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-
-    <title>Ross Grattafiori</title>
-    <!--CSS Bootstrap Information-->
-    <!-- in your header -->
-    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-
-    <!--Beginning of Website-->
+    <link rel="stylesheet" href="new_style.css">
+    <title> Ross Grattafiori </title>
 </head>
 
-<body style="text-align:center">
-    <!--Navigation-->
-    <br>
-
-    <nav class="navbar navbar-expand-xl">
-        <div class="d-flex w-50">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
-                    <span class="fa fa-bars"></span>
-                </button>
-        </div>
-        <div class="navbar-collapse collapse justify-content-center order-1" id="collapsingNavbar">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link soft" href="#about">About<span class="sr-only">Home</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link soft" href="#experience">Experience</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link soft" href="#skills">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link soft" href="#education">Education</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link soft" href="#projects">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link soft" href="#contact">Contact</a>
-                </li>
+<body>
+    <div class="row">
+        <div class="column-center">
+            <ul class="navbar">
+                <li class="navbar-element" ><a href="#about">About</a></li>
+                <li class="navbar-element">|</li>
+                <li class="navbar-element"><a href="#experience">Experience</a></li>
+                <li class="navbar-element">|</li>
+                <li class="navbar-element"><a href="#education">Education</a></li>
+                <li class="navbar-element">|</li>
+                <li class="navbar-element"><a href="#skills">Skills</a></li>
+                <li class="navbar-element">|</li>
+                <li class="navbar-element"><a href="#projects">Projects</a></li>
+                <li class="navbar-element">|</li>
+                <li class="navbar-element"><a href="#contact">Contact</a></li>
             </ul>
         </div>
-        <span class="navbar-text small text-truncate mt-1 w-50 text-right order-2 order-md-last"></span>
-    </nav>
-    <!--Introduction-->
-    <div class="nonG">
-        <div class="wPic">
-            <div id="lead">
-                <br>
-                <img class="profile" src="profile.jpg" width="252" height="336">
-                <div class="wsmollClear">
-                    <h1 style="font-size:55px">Ross Grattafiori</h1>
-                    <h2 class="soft">B.S.E Electrical Engineering <br> B.S.E Computer Science</h2>
-                    <h3 class="soft">University of Michigan - Ann Arbor, Michigan</h3>
-                </div>
-                <br><br>
-            </div>
-        </div>
-        <!--About-->
-        <div class="buffer">
-            <h2 class="heading" id="about">About Me</h2>
-        </div>
-        <div class="wsmoll">
-            <div class="textholdersmoll">
-                <p>My name is Ross Grattafiori. I am originally from Montague, Michigan and am currently in my 4th year at the University of Michigan in Ann Arbor majoring in both Electrical Engineering and Computer Science. I love learning about all things
-                    in the realm of Electrical Engineering and Computer Science, and have taken classes across a wide spectrum of EE and CS related topics. My focus is in Digital Signal Processing and Embedded Systems. Outside of class, I enjoy working
-                    on personal projects, exploring Ann Arbor, and going to concerts. I love being outside and I think the best way to spend time is with good friends.</p>
-            </div>
-        </div>
-        <!--Pics-->
-        <!--div class="row">
-            <div class="column">
-                <img src="3.jpg"style="width:90%" class="rotate">
-            </div>
-            <div class="column">
-                <img src="2.JPG"style="width:90%" class="rotate">
-            </div>
-            <div class="column">
-                <img src="1.jpeg"style="width:90%" class="rotate">
-            </div>
-        </div-->
-        <!--Experience-->
-        <div class="g">
-            <h2 class="heading" id="experience">Experience</h2>
-            <div class="wsmoll">
-                <div class="textholdersmoll">
-                    <h4 class="soft">a2ru Ground Works</h4>
-                    <h5 class="soft">Web Developer</h5>
-                    <h6 class="soft">Ann Arbor, Michigan - Fall 2020</h6>
-                    <br>
-                    <p>Presently I am working on the media-arts integrative platform Ground Works as Web Developer. Work has included building features using Ruby on Rails, HAML, SCSS, and jQuery, and ensuring existing pages are compliant with WCAG 2.1 standards.
-                    </p>
-                </div>
-            </div>
-            <div class="wsmoll">
-                <div class="textholdersmoll">
-                    <h4 class="soft">Medline Industries</h4>
-                    <h5 class="soft">Product Development Intern</h5>
-                    <h6 class="soft">Northfield, Illinois - Summer 2020</h6>
-                    <br>
-                    <p>During the summer of 2020, I was scheduled to work at Medline Industries, but unfortunately the company cancelled their internship program due to the COVID-19 pandemic.</p>
-                </div>
-            </div>
-            <div class="wsmoll">
-                <div class="textholdersmoll">
-                    <h4 class="soft">General Electric Aviation</h4>
-                    <h5 class="soft">Manufacturing Analytics Intern</h5>
-                    <h6 class="soft">Muskegon, Michigan - Summer 2019</h6>
-                    <br>
-                    <p>At General Electric Aviation in the summer of 2019, I worked with the Manufacturing Analytics team, Machine Operators, and Project Engineers to compose an 80 page troubleshooting manual for automatic electrode changers installed in
-                        EDM machines. After compiling the paper copy, I transferred all of the collected information into HTML for integration into a CHM help file that was installed directly onto the machines. Finally I wrote an interactive troubleshooting
-                        and event tracking program using the Java Swing framework to further simplify the maintenance process and lay the foundation for data collection and analysis for each machine, in order to streamline preventative maintenance.</p>
-                </div>
-            </div>
-            <div class="wsmoll">
-                <div class="textholdersmoll">
-                    <h4 class="soft">General Electric Aviation</h4>
-                    <h5 class="soft">Quality Intern</h5>
-                    <h6 class="soft">Muskegon, Michigan - Summer 2018</h6>
-                    <br>
-                    <p>At General Electric Aviation in the summer of 2018, I worked on several small projects for design engineers and extensively with a newly implemented focal sensor technology used for creating 3D models of cooling holes in Siemens NX.
-                        I was in charge of organzing and updating GCode programs in order to reduce mistakes made by operators, in addition to created a calibration document to teach new operators to calibrate and operate the confocal sensor machine.
-                        I also worked with members of the layout team to record large quantities of part data in order to fine tune production machines such as EDMs and grinders.</p>
-                </div>
-            </div>
-        </div>
-        <div class="nonG">
-            <div class="row">
-                <div class="columnleft">
-                    <h2 class="heading" id="skills">Hardware/Low Level Skills</h2>
-                    <div class="block">
-                        <ul>
-                            <li>Arduino</li>
-                            <li>Breadboard</li>
-                            <li>Modelsim</li>
-                            <li>Oscilloscope</li>
-                            <li>Quartus</li>
-                            <li>Raspberry Pi</li>
-                            <li>Soldering Iron</li>
-                            <li>Verilog</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="columnright">
-                    <h2 class="heading" id="skills">Software/High Level Skills</h2>
-                    <div class="block">
-                        <ul>
-                            <li>ARM Assembly</li>
-                            <li>C</li>
-                            <li>C++</li>
-                            <li>CSS/SCSS</li>
-                            <li>Git</li>
-                            <li>HTML/HAML</li>
-                            <li>Java</li>
-                            <li>Linux Systems</li>
-                            <li>Matlab</li>
-                            <li>Python</li>
-                            <li>Ruby on Rails</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--Education-->
-        <div class="g">
-            <h2 class="heading" id="education">Education</h2>
-            <div class="wsmoll">
-                <div class="textholdersmoll">
-                    <h4 class="soft">University of Michigan, Ann Arbor</h4>
-                    <h5 class="soft">September 2017 - May 2022</h5>
-                    <p>I am currently in my 4th year studying both Electrical Engineering and Computer Science through the EECS department at the University of Michigan - Ann Arbor. I have completed or am currently enrolled in the list of relevant major
-                        coursework listed below. A description of these courses can be found <a href="https://bulletin.engin.umich.edu/courses/eecs/">here.</a></p>
-                    <h6 class="soft">Completed/In Progress</h6>
-                    <ul>
-                        <li>EECS 203: Discrete Mathematics</li>
-                        <li>EECS 215: Electronic Circuits</li>
-                        <li>EECS 216: Signals and Systems</li>
-                        <li>EECS 270: Logic Design</li>
-                        <li>EECS 280: Programming and Data Structure</li>
-                        <li>EECS 281: Data Structures and Algorithms</li>
-                        <li>EECS 298: Electrical Engineering System Design</li>
-                        <li>EECS 301: Probabilistic Methods</li>
-                        <li>EECS 320: Semiconductor Devices</li>
-                        <li>EECS 351: Digital Signal Processing</li>
-                        <li>EECS 370: Computer Organization</li>
-                        <li>EECS 452: Digital Signal Processing Lab</li>
-                        <li>EECS 455: Wireless Communication Systems</li>
-                    </ul>
-                    <h6 class="soft">Planned</h6>
-                    <ul>
-                        <li>EECS 373: Introductory Embedded Systems</li>
-                        <li>EECS 376: Foundations of Computer Science</li>
-                        <li>EECS 442: Computer Vision</li>
-                        <li>EECS 445: Machine Learning</li>
-                        <li>EECS 473: Advanced Embedded Systems</li>
-                        <li>EECS 482: Operating Systems</li>
-                    </ul>
+    </div>
 
-                </div>
-            </div>
+    <div class="row-padded">
+        <div class="column-center">
+            <h1> Ross Grattafiori </h1>
+            <h2> University of Michigan </h2>
+            <h3 class="no-padding"> BSE Electrical Engineering </h3>
+            <h3 class="no-padding"> BSE Computer Science </h3>
         </div>
-        <div class="nonG">
-            <h2 class="heading" id="projects">Projects</h2>
-            <p class="soft"> For CoE Honor Code purposes most code is not public, can be made avaliable upon request.</p>
-            <div class="textholdersmollproj">
-                <div class="columntwo">
-                    <img src="spotify2.png" style="width:100%" style="height:100%">
-                </div>
-                <div class="columnthree">
-                    <h4 class="soft">B.O.T (Bringin' Outstanding Tunes)</h4>
-                    <br>
-                    <p>Uses SpotiPy to check Spotify for new songs from a specified list of artist URIs. If the most recent song matches the current date, users will be sent album art, the track list, and a link to the song on spotify. Notifies through either
-                        GroupMe using groupyAPI or via text message using Twilio. Python script running as cronjob on an AWS EC2 instance.</p>
-                    <i href="" target="_blank" class="fa fa-github fa-3x" aria-hidden="true"></i>
-                </div>
-            </div>
-            <div class="textholdersmollproj">
-                <div class="columntwo">
-                    <img src="gps.png" style="width:100%" style="height:100%">
-                </div>
-                <div class="columnthree">
-                    <h4 class="soft">Doppler Frequencies for GPS Satellites</h4>
-                    <br>
-                    <p>Calculates the Doppler frequency from Gold codes given Gold code generator taps for each satellite out of 32 satellites. Simulation uses a Direct Sequence Binary Phase Shift Keying modulator at baseband. EECS 455: Wireless Communication
-                        Systems assignment using Matlab. </p>
-                    <i href="" target="_blank" class="fa fa-github fa-3x" aria-hidden="true"></i>
-                </div>
-            </div>
-            <div class="textholdersmollproj">
-                <div class="columntwo">
-                    <img src="log.png">
-                </div>
-                <div class="columnthree">
-                    <h4 class="soft">Log Manager</h4>
-                    <br>
-                    <p>Utilizes unordered maps, stacks, and queues, in order to append and delete entries in excerpt list from master file of log entries. Searches based on category, keyword, timestamp, timestamp range. Emphasis on runtime and storage tradeoffs.
-                        A project in C++ for EECS 281: Data Structures and Algorithms.</p>
-                    <i href="" target="_blank" class="fa fa-github fa-3x" aria-hidden="true"></i>
-                </div>
-            </div>
-            <div class="textholdersmollproj">
-                <div class="columntwo">
-                    <img src="linker.gif" style="width:100%" style="height:100%">>
-                </div>
-                <div class="columnthree">
-                    <h4 class="soft">Linker for LC2K</h4>
-                    <br>
-                    <p>A Linker for the LC2K instructional set architecture. Takes assembled LC2K based object files and outputs machine code. Part of a series of LC2K projects for EECS 370: Computer Organization written in C; assembler, simulator, pipeline
-                        register, cache simulator.
-                    </p>
-                    <br>
-                    <i href="" target="_blank" class="fa fa-github fa-3x" aria-hidden="true"></i>
-                </div>
-            </div>
-            <div class="textholdersmollproj">
-                <div class="columntwo">
-                    <img src="mult.png">
-                </div>
-                <div class="columnthree">
-                    <h4 class="soft">LC2K Multiplier</h4>
-                    <br>
-                    <p>A multiplier written in LC2K. Uses basic load, save, add, nor, and branch commands with a constraint on the number of operations. LC2K instructional set architecture used at University of Michigan, UC Santa Cruz, and University of
-                        Colorado.
-                    </p>
-                    <br>
-                    <i href="" target="_blank" class="fa fa-github fa-3x" aria-hidden="true"></i>
-                </div>
-            </div>
-            <div class="textholdersmollproj">
-                <div class="columntwo">
-                    <img src="volume.png" style="width:100%" style="height:100%">
-                </div>
-                <div class="columnthree">
-                    <h4 class="soft">Adaptive Volume</h4>
-                    <br>
-                    <p>Uses a .wav input and microphone for ambient noise, adjusts the volume of the .wav file based on the volume of the outside noise. Written in Matlab as the final project for EECS 351: Digital Signal Processing.
-                        <br>
-                        <br>
-                    </p>
-                    <i href="" target="_blank" class="fa fa-github fa-3x" aria-hidden="true"></i>
-                </div>
-            </div>
-            <div class="textholdersmollproj">
-                <div class="columntwo">
-                    <img src="nes.png" style="width:100%" style="height:100%">
-                </div>
-                <div class="columnthree">
-                    <h4 class="soft">NES Controller Interface</h4>
-                    <br>
-                    <p>A sequential digital circuit on an Altera FPGA that interfaces with an NES game controller. Three signals, latch, pulse, and data, sampled at 60Hz with outputs written to LEDs and color sequences mapped to specific button press combinations.
-                        EECS 270: Logic Design written in Verilog.
-                        <br>
+    </div>
 
-                    </p>
-                    <i href="" target="_blank" class="fa fa-github fa-3x" aria-hidden="true"></i>
-                </div>
-            </div>
-            <div class="textholdersmollproj">
-                <div class="columntwo">
-                    <img src="ge.jpg" style="border-radius:25px;">
-                </div>
-                <div class="columnthree">
-                    <h4 class="soft">Interactive Troubleshooting and Event Tracking</h4>
-                    <br>
-                    <p>Interface using Java Swing framework deployed at GE Aviation Muskegon to 23 production Electrode Discharge Machines. Takes an input of machine problems and their respective solutions and generates step-by-step troubleshooting interface
-                        with instructions and pictures for maintenance workers. Also records solutions selected by user for later use in preventative maintenance.
-                    </p>
-                </div>
-            </div>
-            <div class="textholdersmollproj">
-                <div class="columntwo">
-                    <img src="robot.png" style="width:100%" style="height:100%">
-                </div>
-                <div class="columnthree">
-                    <h4 class="soft">Maze Navigation Robot</h4>
-                    <br>
-                    <p>Two wheeled robot with multiple systems built including, computer vision webcam, heat detection thermopile with op-amp and ADC, sonar arduino sensor, wheel encoders. Built to locate object of specific temperature and color in a maze.
-                        Robot software written in C and Python, built for EECS 298: Electrical Engineering System Design final project. Our team won the award for the fastest object location time.</p>
-                </div>
-            </div>
-            <div class="textholdersmollproj">
-                <div class="columntwo">
-                    <img src="am.png">
-                </div>
-                <div class="columnthree">
-                    <h4 class="soft">AM Radio Reciever</h4>
-                    <br>
-                    <p>Composed of an amplifier, envelope detector and IF filter designed to receiver a song from a transmitter. A hardware assignment for EECS 216: Signals and Systems using a Keysight Oscilloscope, and DC power supply for the operational
-                        amplifier.
-                    </p>
-                </div>
-            </div>
-            <div class="textholdersmollproj">
-                <div class="columntwo">
-                    <img src="filters.png" style="width:100%" style="height:100%">
-                </div>
-                <div class="columnthree">
-                    <h4 class="soft">Breadboard Filters</h4>
-                    <br>
-                    <p>Four basic RLC circuits designed in LTSpice and build on a breadboard in order to compare theoretical transfer functions to measured transfer functions. Used with multiple audio signals have noises at different frequencies. Assignment
-                        for EECS 215: Electronic Circuits.
-                    </p>
-                </div>
-            </div>
-            <div class="g">
-                <h2 class="heading" id="contact">Contact</h2>
-                <h4 class="soft">(231) 720-5205</h4>
-                <h4 class="soft">rossgrat@umich.edu</h4>
-            </div>
+    <div class="row-padded">
+        <div class="column">
+            <h2 class="center" id="about">About Me</h2>
+            <p>My name is Ross Grattafiori. I am currently in my 5th year at the University of Michigan in Ann Arbor majoring in both Electrical Engineering and Computer Science. I love learning about all things in the realm of Electrical Engineering and Computer Science. My focus is in Embedded Systems. Outside of class, I enjoy working out, reading, being outside, and spending time with family and friends.</p>
+        </div>
+    </div>
+
+    <div class="row-padded">
+        <div class="column">
+            <h2 class="center" id="experience">Experience</h2>
+            <h3 class="no-padding"> Electrical / Software R&D Intern </h3>
+            <h4 class="no-padding"> Medline Industries</h4>
+            <h5 class="no-padding"> Northfield, Illinois</h5>
+            <h5 class="no-padding"> June 2021 - August 2021 </h5>
+            <ul>
+                <li>Designed, sourced parts, built, and tested prototype LED light source based on new Urology department project design inputs and constraints</li>
+                <li>Created flowcharts, organized, and formatted software documentation for enteral feeding pump using Doxygen to ready project for 5-10k submission and meet IEC 62304 standards</li>
+                <li>Sourced alternate parts for DVT pump and enteral feeding pump from BOM and electrical schematic to overcome semiconductor shortages and restart prototype creation</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="row-padded">
+        <div class="column">
+            <h3 class="no-padding"> Web Developer </h3>
+            <h4 class="no-padding"> a2ru Groundworks.io Platform</h4>
+            <h5 class="no-padding"> Ann Arbor, Michigan</h5>
+            <h5 class="no-padding"> August 2020 - June 2021</h5>
+            <ul>
+                <li> Designed and implemented front-end and back-end solutions for the Ground Works arts-integrated-media platform using Ruby on Rails, JQuery, and HAML/SASS to add user functionality to the site projects
+            </ul>
+        </div>
+    </div>
+
+    <div class="row-padded">
+        <div class="column">
+            <h3 class="no-padding"> Manufacturing Analytics Intern</h3>
+            <h4 class="no-padding"> General Electric Aviation</h4>
+            <h5 class="no-padding"> Muskegon, Michigan</h5>
+            <h5 class="no-padding"> May 2019 - August 2019</h5>
+            <ul>
+                <li>Developed event tracking and interactive troubleshooting program using Java, deployed to 16 CNC machines and educated machine technicians on usage to eliminate ineffective and outdated paper recording system and increase machine uptime</li>
+                <li>Coordinated meetings between machine technicians and project engineers to collect data on machine errors and to develop standard document template for fixing errors</li>
+                <li>Transferred troubleshooting and repair document to HTML syntax and into CHM help file for direct implementation to machines resulting in easier access, and elimination of uncontrolled paper folders</li>
+                <li>Created and distributed 80-page operation, troubleshooting, and repair procedure document to three production lines to reduce machine errors and improve efficiency</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row-padded">
+        <div class="column">
+            <h3 class="no-padding"> Quality Intern</h3>
+            <h4 class="no-padding"> General Electric Aviation</h4>
+            <h5 class="no-padding"> Muskegon, Michigan</h5>
+            <h5 class="no-padding">May 2018 - August 2018</h5>
+            <ul>
+                <li> Organized 50+ CNC GCode parts measuring programs, correlated and updated in-use programs in newly implemented confocal sensor technology to reduce inconsistencies in measurements and streamline technician usage</li>
+                <li>Wrote official process documentation for calibration procedure of newly implemented confocal sensor technology in collaboration with project engineers to standardize use among 3 different production hubs</li>
+                <li>Assembled new laser measurement technology for use and integration into part audit routines, cabled power supply and setup ethernet service for easy usage by measurement technicians</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <h2 class="center" id="education">Education</h2>
+            <h3 class="no-padding"> University of Michigan</h3>
+            <h5 class="no-padding"> Ann Arbor, Michigan</h5>
+            <h5 class="no-padding"> September 2017 - May 2022</h5>
+            <p> I am currently in my 5th year studying both Electrical Engineering and Computer Science through the EECS department at the University of Michigan. I have completed or am currently enrolled in the list of relevant major coursework listed below. A description of these courses can be found <a href="https://bulletin.engin.umich.edu/courses/eecs/">here.</a></p>
+        </div>
+    </div>
+
+    <div class="row-mult-column">
+        <h3 class="center"> Courses</h3>
+        <div class="column_1_4">
+            <h4 class="center">Embedded Systems</h4>
+            <ul>
+                <li>EECS 270: Logic Design</li>
+                <li>EECS 370: Computer Organization</li>
+                <li>EECS 373: Introductory Embedded Systems</li>
+                <li>EECS 473: Advanced Embedded Systems <i>(In-progress)</i></li>
+                <li>EECS 482: Operating Systems <i>(Planned)</i></li>
+            </ul>
+        </div>
+        <div class="column_2_4">
+            <h4 class="center">Signal Processing</h4>
+            <ul>
+                <li>EECS 216: Signals and Systems</li>
+                <li>EECS 351: Digital Signal Processing</li>
+                <li>EECS 452: Digital Signal Processing Lab</li>
+                <li>EECS 445: Machine Learning <i>(In-progress)</i></li>
+                <li>EECS 455: Wireless Communication Systems</li>
+            </ul>
+        </div>
+        <div class="column_3_4">
+            <h4 class="center"> Computer Science and Programming</h4>
+            <ul>
+                <li>EECS 203: Discrete Mathematics</li>
+                <li>EECS 280: Programming and Data Structures</li>
+                <li>EECS 281: Data Structures and Algorithms</li>
+                <li>EECS 376: Foundations of Computer Science</li>
+            </ul>
+        </div>
+        <div class="column_4_4">
+            <h4 class="center"> Electronics</h4>
+            <ul>
+                <li>EECS 215: Electronic Circuits</li>
+                <li>EECS 230: Electromagnetics <i>(Planned)</i></li>
+                <li>EECS 298: Electrical Engineering System Design</li>
+                <li>EECS 301: Probabilistic Methods in Electrical Engineering</li>
+                <li>EECS 320: Semiconductor Devices</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row-mult-column">
+        <h2 class="center" id="skills">Skills</h2>
+        <div class="column_1_3">
+            <h4 class="center">Languages</h4>
+            <h5 class="no-padding">Compiled</h5>
+            <ul>
+                <li>C</li>
+                <li>C++</li>
+                <li>ARMv7</li>
+            </ul>
+
+            <h5 class="no-padding">Scripting</h5>
+            <ul>
+                <li>Python</li>
+                <li>Bash</li>
+
+            </ul>
+            <h5 class="no-padding">HDL</h5>
+            <ul>
+                <li>Verilog</li>
+            </ul>
+            <h5 class="no-padding">Markup</h5>
+            <ul>    
+                <li>HTML/CSS</li>
+                <li>Markdown</li>
+                <li>LaTeX</li>
+            </ul>
+        </div>
+        <div class="column_2_3">
+            <h4 class="center">Concepts </h4>
+            <h5 class="no-padding">Embedded</h5>
+            <ul>
+                <li>I2C</li>
+                <li>SPI</li>
+                <li>UART</li>
+                <li>ADC</li>
+                <li>DAC</li>
+                <li>ABI</li>
+                <li>MMIO</li>
+                <li>Interrupts</li>
+                <li>Timers</li>
+            </ul>
+            <h5 class="no-padding">Signals</h5>
+            <ul>
+                <li>FFT</li>
+                <li>STFT</li>
+                <li>Z-Transforms</li>
+                <li>FIR Filtering</li>
+                <li>Windowing</li>
+                <li>BPSK, QPSK, QAM, PCM/FM, APSK, OFDM</li>
+                <li>Kalman Filters</li>
+                <li>Trellis and Block Codes</li>
+            </ul>
+        </div>
+        <div class="column_3_3">
+            <h4 class="center"> Applications</h4>
+            <h5 class="no-padding">OS</h5>
+            <ul>
+                <li>Linux</li>
+            </ul>
+            <h5 class="no-padding">Software</h5>
+             <ul>
+                <li>Git</li>
+                <li>Matlab</li>
+                <li>SOLIDWORKS PCB/Schematic</li>
+                <li>ExpressPCB/Schematic</i></li>
+            </ul>
+            <h5 class="no-padding">Hardware</h5>
+            <ul>
+                <li>STM32 and Arduino Microcontrollers</li>
+                <li>Raspberry Pi and Beaglebone SBCs</li>
+            </ul>
+            <h5 class="no-padding">Equipment</h5>
+            <ul>
+                <li>Keysight Oscilloscopes</li>
+                <li>Logic Analyzers</li>
+                <li>Function Generators</li>
+                <li>Soldering</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row-mult-column">
+        <h2 class="center" id="projects">Projects</h2>
+        <div class="column_1_3">
+            <h4 class="center">Upper Level Coursework</h4>
+            <h5 class="no-padding">Introductory Embedded Systems</h5>
+            <ul>
+                Maze Robot Final Project - 
+            </ul>
+            <h5 class="no-padding">Digital Signal Processing Lab</h5>
+            <ul>
+                AutoKaraoke Group Project - 
+            </ul>
+        </div>
+        <div class="column_2_3">
+            <h4 class="center">Mid Level Coursework </h4>
+            <h5 class="no-padding">Data Structures and Algorithms</h5>
+            <ul>
+                <li> Treasure Map Solver - Utilizes deques
+                <li> Zombie Defense Game - Utilizes priority queues, both STL and custom implemented priority queue
+                <li> Log Manager - Utilizes unordered maps</li>
+                <li> Node Visiting Game - Utilizes MST algorithms, Prim and Kruskals, as well as branch and bound algorithm to approximate TSP
+            </ul>
+                <h5 class="no-padding">Computer Organization</h5>
+            <ul>
+                <li> Assembler and Simulator - Assembler and simulator for LC2K ISA
+                <li> Upgraded Assembler and Linker - Assembler with added symbol table etc and Linker for LC2K ISA
+                <li> Pipeline Simulator- Pipeline simulator for LC2K</li>
+                <li> Cache Simulator - Cache simulator for LC2K
+            </ul>
+        </div>
+        <div class="column_3_3">
+            <h4 class="center"> Personal</h4>
+            <ul>
+                <li> Spotify Music Updates - 
+            </ul>
+        </div>
+    </div>
+
+    <div class="row-padded">
+        <div class="column-center">
+            <h2 class="center" id="contact">Contact</h2>
+            <ul class="navbar">
+                <li class="navbar-element"><a href="#contact" onClick=" navigator.clipboard.writeText('rossgrat@umich.edu'); alert('Email copied to clipboard.')">Email</a></li>
+                <li class="navbar-element">|</li>
+                <li class="navbar-element"><a href="https://www.linkedin.com/in/ross-grattafiori/">Linkedin</a></li>
+                <li class="navbar-element">|</li>
+                <li class="navbar-element">Handshake</li>
+            </ul>
         </div>
     </div>
 
 </body>
-
-</html>

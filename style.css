@@ -1,302 +1,85 @@
-/*	no beginning item is type selector
-	# beginning item is ID selector
-	. beginning item is class selector
-*/
+.no-padding {
+    margin: 0;
+    padding: 0;
+}
+
+.center {
+    text-align: center;
+}
 
 .navbar {
-    text-align: center;
-    left: 20%;
-    width: 60%;
-    border-radius: 25px;
-    box-shadow: 1px 1px 5px 0.5px #888888;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
-.navbar-nav {
-    font-size: 22px;
-    padding: 5px;
-}
-
-.navbar-nav li a:hover {
-    background-color: lightgrey;
-    border-radius: 25px;
-    color: black;
-}
-
-.nav-link {
-    color: black;
-}
-
-.nav-item {
-    margin-left: 8px;
-    margin-right: 8px;
-}
-
-.navbar-toggler {
+.navbar-element {
     display: inline-block;
 }
 
-#lead {
-    text-align: center;
-    word-wrap: break-word;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    font-color: #fff;
-    width: 100%;
-    margin-top: 20px;
-    margin-bottom: 50px;
-}
-
-.rotate {
-    border-radius: 25px;
-}
-
-.profile {
-    border-radius: 25px;
-}
-
-.textholder {
-    text-align: center;
-    word-wrap: break-word;
-    width: 95%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.textholdersmoll {
-    word-wrap: break-word;
-    text-align: left;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
+.navbar li {
     display: inline-block;
-    padding: 10px;
 }
 
-.textholdersmollCenter {
-    word-wrap: break-word;
-    text-align: center;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    display: inline-block;
-    padding: 10px;
+.row-padded {
+    margin-bottom: 100px;
 }
 
-.textholdersmollproj {
-    text-align: left;
-    width: 60%;
-    height: 250px;
-    margin-left: auto;
-    margin-right: auto;
-    display: inline-block;
-    border-radius: 25px;
-    box-shadow: 1px 1px 5px 0.5px #888888;
-    margin-bottom: 30px;
-    margin-top: 10px;
-    overflow: hidden;
-}
-
-.textholdersmoll span {
-    float: right;
-}
-
-.heading {
-    text-align: center
-}
-
-.buffer {
-    margin-top: 90px
-}
-
-.g {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    background-color: #f2f2f5;
-}
-
-.nonG {
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
-
-.w {
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    background-color: white;
-    border-radius: 25px;
-    box-shadow: 1px 1px 5px 0.5px #888888;
-    padding: 10px;
-}
-
-.wPic {
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    background-color: white;
-    border-radius: 25px;
-    box-shadow: 1px 1px 5px 0.5px #888888;
-    padding: 10px;
-    background-image: url("north.jpg")
-}
-
-.wsmoll {
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    background-color: white;
-    border-radius: 25px;
-    box-shadow: 1px 1px 5px 0.5px #888888;
-    padding: 10px;
-}
-
-.wsmollClear {
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    background-color: white;
-    border-radius: 25px;
-    padding: 10px;
-    background: rgba(255, 255, 255, 0.5)
-}
-
-.wmed {
-    margin-left: auto;
-    margin-right: auto;
-    width: 70%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    background-color: white;
-    border-radius: 25px;
-    box-shadow: 1px 1px 5px 0.5px #888888;
-    padding: 10px;
-}
-
-.soft {
-    font-weight: 300;
-}
-
-.lesssoft {
-    font-weight: 400;
-}
-
-.columnleft {
-    width: 40%;
-    padding: 5px;
-    margin-left: 10%;
-}
-
-.columnright {
-    width: 40%;
-    padding: 5px;
-    margin-right: 10%;
-}
-
-
-/* Clear floats after image containers */
-
-.row::after {
-    content: "";
-    clear: both;
+.row-mult-column:after{
+    content:  "";
     display: table;
+    clear: both;
 }
 
-.columntwo {
+.column {}
+
+.column-center {
+    text-align: center;
+}
+
+.column_1_3{
     float: left;
     width: 33.33%;
-    text-align: left;
-    overflow: hidden;
 }
 
-.rowtwo::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
-.columnthree {
+.column_2_3{
     float: left;
-    width: 66.66%;
-    padding: 15px;
-    padding-left: 30px;
-    padding-right: 30px;
+    width: 33.33%;
 }
 
-.block {
-    margin-bottom: 10px;
+.column_3_3{
+    float: left;
+    width: 33.33%;
 }
 
-.block li {
-    display: inline-block;
-    margin: 7px;
-    padding: 10px 15px;
-    color: black;
-    background: #e4e4ea;
-    list-style: none;
-    cursor: default;
-    font-size: 1.2em;
-    border-radius: 25px;
+.column_1_4{
+    float: left;
+    width: 25%;
 }
 
-.block ul {
-    display: block;
-    margin: 0 auto;
-    padding: 0;
-    max-width: 1200px;
+.column_2_4{
+    float: left;
+    width: 25%;
 }
 
-
-/* Style all font awesome icons */
-
-.fa {
-    color: grey;
+.column_3_4{
+    float: left;
+    width: 25%;
 }
 
-.yellow {
-    color: gold;
+.column_4_4{
+    float: left;
+    width: 25%;
 }
 
-.green {
-    color: green;
+.column_1_2{
+    float: left;
+    width: 50%;
+}
+
+.column_2_2{
+    float: left;
+    width: 50%;
 }
 
 
-/* Add a hover effect if you want */
-
-
-/*.fa:hover {
-  opacity: 0.7;
-}
-*/
-
-.largeicons {
-    text-align: center;
-    font-size: 50px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-@media (max-width:1700px) {
-    .columntwo {
-        width: 0px;
-        height: 0px;
-    }
-    .columnthree {
-        float: none;
-        overflow: hidden;
-        width: 100%;
-    }
-    .textholdersmollproj {
-        height: 100%;
-    }
-}
