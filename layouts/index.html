@@ -1,4 +1,5 @@
 {{ define "main"}}
+{{ $image := resources.Get "images/minimal-nature-1.jpeg" }} <!--For some reason tailwind needs this here to render the image -->
 <body class="bg-[url('../images/minimal-nature-1.jpeg')] bg-cover font-mono">
   <div class="flex flex-row w-screen gap-5 justify-center">
     <div class="flex flex-col h-screen justify-center">
