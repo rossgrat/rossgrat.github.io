@@ -17,15 +17,15 @@
     {{ $styles := $styles | minify | fingerprint | resources.PostCSS }}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
     {{ end }}
-    <title>{{ .Title }}</title>
+    <title>{{ .Title }} - Ross Grattafiori</title>
 </head>
 
 <body class="text-stone-200 font-mono">
     <div class="container lg mx-auto">
         <div class="flex flex-col h-screen">
             <header>{{ partial "header" . }}</header>
-            <main class="m-auto">{{ block "main" . }}{{ end }}</main>
-            <footer>{{ partial "footer" . }}</footer>
+            <main class="mt-10">{{ block "main" . }}{{ end }}</main>
+            <footer class="mt-auto">{{ partial "footer" . }}</footer>
         </div>
     </div>
 </body>

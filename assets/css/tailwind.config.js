@@ -6,20 +6,16 @@ module.exports = {
     `${themeDir}/content/**/*.md`
   ],
   theme: {
-    extend: {
-      backgroundImage: {
-        'nature': "url('../images/minimal-nature-1.jpeg')",
-      }
-    },
     container: {
-      padding: {
-        DEFAULT: '2rem',
-        sm: '2rem',
-        lg: '10rem',
-        xl: '18rem',
-        '2xl': '26rem',
+        padding: {
+          DEFAULT: '1rem',
+          sm: '2rem',
+          lg: '10rem',
+          xl: '18rem',
+          '2xl': '26rem',
+        },
       },
-    },
+    extend: {}
   },
   variants: {},
   plugins: []

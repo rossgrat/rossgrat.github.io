@@ -1,8 +1,7 @@
 {{ define "main"}}
 <div class="flex flex-col">
     <div class="flex flex-col gap-2">
-        <h1 class="text-center font-extrabold text-4xl">Blog</h1>
-        <p>The underesearched and heavily biased opinions in the the posts below are solely my own and do not represent those of my employer.</p>
+        <h1 class="font-extrabold text-4xl">{{ .Title }}</h1>
     </div>
     <div class="pt-10">
         {{ range .Paginator.Pages }}

@@ -1,3 +1,33 @@
 @import "node_modules/tailwindcss/base";
 @import "node_modules/tailwindcss/components";
 @import "node_modules/tailwindcss/utilities";
+
+@layer base {
+    h1{
+        @apply font-extrabold;
+        @apply text-4xl;
+        @apply my-4;
+    }
+    h2 {
+        @apply font-bold;
+        @apply text-2xl;
+        @apply my-3;
+    }
+    h3 {
+        @apply text-lg;
+        @apply my-2;
+    }
+    pre {
+        @apply border;
+        @apply border-stone-600;
+        @apply p-3;
+        @apply text-sm;
+        @apply my-3;
+        @apply rounded;
+    }
+    a {
+        @apply underline;
+        @apply underline-offset-4;
+    }
+
+}

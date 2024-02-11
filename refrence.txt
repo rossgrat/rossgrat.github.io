@@ -1,0 +1,21 @@
+Code highlighting in markdown
+
+{{< highlight go >}}
+func (ts *taskServer) getTaskHandler(w http.ResponseWriter, req *http.Request) {
+  log.Printf("handling get task at %s\n", req.URL.Path)
+
+  id, err := strconv.Atoi(req.PathValue("id"))
+  if err != nil {
+    http.Error(w, "invalid id", http.StatusBadRequest)
+    return
+  }
+
+  task, err := ts.store.GetTask(id)
+  if err != nil {
+    http.Error(w, err.Error(), http.StatusNotFound)
+    return
+  }
+
+  renderJSON(w, task)
+}
+{{< / highlight >}}

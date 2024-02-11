@@ -1,7 +1,13 @@
 {
    "date": "2024-02-04T12:00:07-05:00",
    "draft": false,
-   "title": "Python Runtimes"
+   "title": "Python Runtimes",
+   "tags": [
+      "python",
+      "runtimes",
+      "coding",
+      "software"
+   ]
 }
 
 semper, aliquet orci ut, placerat lorem. Mauris in congue mauris, a consequat enim. Cras imperdiet tempus mauris, ac maximus diam venenatis non. Phasellus vulputate ornare ligula id eleifend. Duis eget interdum augue, a maximus dui. Ut sed egestas turpis. Duis vulputate arcu neque, id congue ligula consequat in. Nulla facilisi. Nullam aliquam, augue nec convallis cursus, est massa laoreet odio, vel semper quam leo eu urna. Maecenas convallis gravida libero, eget fermentum massa pretium a. Cras odio mauris, volutpat in porttitor in, pharetra a ipsum. Pellentesque accumsan ante nunc, eget interdum turpis faucibus nec. Nunc sodales sed ante eu dictum.
