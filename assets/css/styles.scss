@@ -28,6 +28,7 @@
     a {
         @apply underline;
         @apply underline-offset-4;
+        @apply hover:hover:text-stone-500;
     }
 
 }

@@ -3,10 +3,9 @@
     <div class="flex flex-col gap-2">
         <h1 class="font-extrabold text-4xl">{{ .Title }}</h1>
     </div>
-    <div class="pt-10">
+    <div class="mt-5">
         {{ range .Paginator.Pages }}
-        <p>{{ .Date.Format "2006-01-02  " }} <a class="underline underline-offset-4 hover:hover:text-stone-500"
-                href="{{ .RelPermalink }}">{{.Title }}</a></p>
+        <p>{{ .Date.Format "2006-01-02  " }} <a href="{{ .RelPermalink }}">{{.Title }}</a></p>
         {{ end }}
     </div>
 </div>
