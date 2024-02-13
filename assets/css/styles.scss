@@ -33,8 +33,13 @@
     p{
         @apply py-2;
     }
-    li {
+    ol {
         @apply list-decimal list-inside;
+    }
+    ul {
+        @apply list-disc list-inside;
+    }
+    li {
         @apply py-1;
     }
 
