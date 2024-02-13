@@ -11,4 +11,4 @@
 
 ## Electrical Engineering
 
-* [falstad.com/circuit](https://www.falstad.com/circuit/) - An appliet for simulating circuits
+* [falstad.com/circuit](https://www.falstad.com/circuit/) - An applet for simulating circuits

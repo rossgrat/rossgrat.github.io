@@ -22,8 +22,8 @@
 
 <body class="text-stone-200 font-mono">
     <div class="container lg mx-auto">
-        <div class="flex flex-col h-screen">
-            <header>{{ partial "header" . }}</header>
+        <div class="flex flex-col min-h-screen">
+            <header class="bg-stone-900  border-stone-800 border rounded sticky top-0 p-3 mt-2">{{ partial "header" . }}</header>
             <main class="mt-10">{{ block "main" . }}{{ end }}</main>
             <footer class="mt-auto">{{ partial "footer" . }}</footer>
         </div>
