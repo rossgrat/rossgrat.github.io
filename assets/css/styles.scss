@@ -30,5 +30,12 @@
         @apply underline-offset-4;
         @apply hover:hover:text-stone-500;
     }
+    p{
+        @apply py-2;
+    }
+    li {
+        @apply list-decimal list-inside;
+        @apply py-1;
+    }
 
 }

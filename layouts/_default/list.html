@@ -5,7 +5,7 @@
     </div>
     <div class="mt-5">
         {{ range .Paginator.Pages }}
-        <p>{{ .Date.Format "2006-01-02  " }} <a href="{{ .RelPermalink }}">{{.Title }}</a></p>
+        <p class="py-0">{{ .Date.Format "2006-01-02  " }} <a href="{{ .RelPermalink }}">{{.Title }}</a></p>
         {{ end }}
     </div>
 </div>
