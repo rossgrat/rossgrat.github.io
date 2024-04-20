@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html class="bg-stone-950" lang="en-us">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    
+    
+    <link rel="stylesheet" href="/styles.2024-04-20%2019:05:14.180661%20-0400%20EDT%20m=&#43;0.076239043.css">
+    
+    <title>Hello World - Ross Grattafiori</title>
+</head>
+
+<body class="text-stone-300 font-mono">
+    <div class="container lg mx-auto">
+        <div class="flex flex-col min-h-screen">
+            <header class="bg-stone-900  border-stone-800 border rounded sticky top-1 p-3"><div class="hidden sm:block sm:float-left">
+    <p class="text-2xl font-extrabold py-0">ross.grattafiori.dev</p>
+</div>
+<div class="place-content-center sm:float-right flex flex-row ml-auto gap-5">
+    <a href="/" class="fill-stone-200 hover:fill-stone-500">
+        <svg class="w-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <title>Home</title>
+            <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" />
+        </svg>
+    </a>
+    
+    <a href="/directory" class="fill-stone-200 hover:fill-stone-500">
+        <svg class="w-8" xmlns="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <title>Directory</title>
+            <path d="M10,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V8C22,6.89 21.1,6 20,6H12L10,4Z" />
+        </svg>
+    </a>
+    <a href="/posts" class="fill-stone-200 hover:fill-stone-500">
+        <svg class="fill-stone-200 hover:fill-stone-500 w-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <title>Blog</title>
+            <path d="M3 3V21H21V3H3M18 18H6V17H18V18M18 16H6V15H18V16M18 12H6V6H18V12Z" />
+        </svg>
+    </a>
+</div></header>
+            <main class="mt-10">
+<div>
+    <div class="flex flex-col gap-2 pb-5">
+        <div>
+            <h1 class="font-extrabold text-4xl">Hello World</h1>
+        </div>
+        <div class="flex flex-row gap-5">
+            <p class="text-sm">Feb 11, 2024</p>
+            <p class="text-sm">8-minute read</p>
+            <p class="text-sm">
+            
+                <a class="underline" href="/tags/website">website</a>
+            
+            </p>
+        </div>
+    </div>
+    <div>
+        <p><p>This is the first ever post for the third iteration of my personal website that now features blogging thanks to the excellent <a href="https://gohugo.io/">Hugo</a> static site generator. In this post I want to explain my thoughts about what should go on the site, touch on some of the technologies used to build the site, and briefly discuss my thoughts on the look of the site.</p>
+<h2 id="what-should-go-on-the-website">What should go on the website?</h2>
+<p>The software engineer/developer portfolio websites I have seen usually look similar to a resume, with sections such as &ldquo;work experience&rdquo;, &ldquo;education&rdquo;, &ldquo;skills&rdquo;, etc. To me these types of websites violate the principle of DRY. If all of this information is in a resume, why repeat it on a website? Now the same text in two locations needs to be updated whenever something changes. Three locations if your Linkedin page functions as another copy of your resume.</p>
+<p>An argument might be made that the &ldquo;work experience&rdquo; section on a website adds value with extra details that can&rsquo;t fit on a resume. However, if it is true that recruiters barely read resumes as they are, I feel that reading the same information only wordier is not something that any recruiter will engage in. Which then raises the question, who are the extra details for? Maybe yourself if you like to keep a detailed work history to look back at and feel good about, but is the self-satisfaction of this detailed work history worth the time spent writing and maintaining it? I believe that there is value in being able to concisely highlight only the important points of a work experience on the limited space of a resume. I also think that the lack of details for an entry leaves room to elaborate in an interview, and that by omitting information, I can more easily direct the flow of converstaion and come up with answers to common questions related to that missing information.</p>
+<p>I feel the same DRY argument is true for the &ldquo;about&rdquo; section often included in websites. Both Linkedin and Github include a location for this information, why duplicate it for a third time?</p>
+<p>Sections titled &ldquo;skills&rdquo; often have a proficiency progress bar. The progress bar section to me seems at worst confusing and at best uneccessary. What is the percentage based on? If someone lists that they are 80% skilled in Python, does that mean they know 80% of all there is to know of Python? In <a href="https://www.crackingthecodinginterview.com/">Cracking the Coding Interview</a>, Gayle Laakmann McDowell recommends that skill proficieny metrics, should be kept to simple categories such as &lsquo;Proficient&rsquo; or &lsquo;Experienced&rsquo;. However, once you scale down the proficiency categories to something simple, they can fit on a resume, and then the same DRY argument applies.</p>
+<p>So if I want to eschew the traditional portfolio site as a resume extension, what should I put on my personal website? I decided to define some goals before starting, and came up with two:</p>
+<ol>
+<li>Develop my own little corner of the web to store things that I find interesting for later use or reference.</li>
+<li>Create a platform that I can use to refine my views on different technologies, develop my writing skills, and record events of significance in my career.</li>
+</ol>
+<p>Goal number one is based on the concept of a <a href="https://www.technologyreview.com/2020/09/03/1007716/digital-gardens-let-you-cultivate-your-own-little-bit-of-the-internet/">Digital Garden</a>, as well as this <a href="https://www.marginalia.nu/log/19-website-discoverability-crisis/">Hacker News post</a>. The concept of a digital garden is not new, the idea is to eschew social media in favor of your own hand-curated blob of the internet. The Hacker news post discusses a small website discoverability crisis. The writer argues that the best way to shine a light on smaller websites is to keep a bookmark of hyperlinks to places that one finds interesting.</p>
+<p>Goal number two is more self-explanatory. It is often said that teaching is the best way to learn. If I can write a post about a difficult problem I have solved, a new tech stack that I learned to use, or simply just something I learned on a given day, maybe I will better internalize that information for the future. Additionally, I have heard that by expressing goals outwardly, a person is more likely to follow through to the completion of their goals. I&rsquo;ve mostly heard this in reference to fitness, but I imagine it applies to projects as well. If I start a long project, now I have a place to document regular updates on the status of the project.</p>
+<p>Using these goals, I have developed this website with three different components. The first component is the home page with my name and position. This should give visitors a feel for what is present on the rest of the site. The home page also contains links underneath my name and position. My goal is for these links to act as a centralized repository for any of my other accounts I deem relevant. The current links are my Github, my Linkedin, and my Leetcode. The second component is what I am calling the directory. The directory is a collection of any sites I have found interesting, and a brief description of what they are, all organized by category. The third component is this blog. Each blog post can be associated with one or more tags, and by clicking on a tag in the post, a user can see all posts with that tag.</p>
+<h2 id="how-should-the-website-be-built">How should the website be built?</h2>
+<p>Portfolio websites I have seen will often be built in React or some other JS framework/library if the developer specializes in frontend technologies. Although I consider myself more of an Embedded Systems and Backend developer, I thought it might be fun to learn a frontend framework. As a fan of Google technologies and Typescript, I originally considered using <a href="https://angular.io/">Angular</a> as the framework to build this site on, integrated with some free CMS for blogging. After completing the Angular tutorial, I realized that Angular might be a bit overkill for what I needed, but I did walk away impressed by how easy an intuitive it felt to use a declarative framework.</p>
+<p>After the Angular tutorial I took a step back and thought about what I really needed, how I could get from point A to point B in the least amount of time, with the least amount of effort, and finish with a product that required little maintenance and just worked. I didn&rsquo;t really need anything with fancy Javascript, my experience with basic HTML would work fine. I also didn&rsquo;t really want to use a fancy CMS with a seperate web page and login for blog posts, markdown would be plenty good.</p>
+<p>I decided the first question I had to answer was cost. I didn&rsquo;t want to pay to host the site. I had previously used Github pages to host a free personal website, so I decided to use them again. Github pages uses the <a href="https://jekyllrb.com/">Jekyll</a> static site generator as a default solution for generating static contenct and blog posts, which at first seemed like perfect solution to what I needed. After some more digging, I decided that I didn&rsquo;t really want to learn Ruby, and didn&rsquo;t really want to use a canned Jekyll theme. Jekyll led me to a list of static site generators, where I discovered Hugo. As a big fan of Golang, and having some previous experience with Golang HTML templates, I decided I would use Hugo.</p>
+<p>Hugo offers themes just like Jekyll, but after digging around a bit I couldn&rsquo;t find anything that I fit with what I had in mind. I wanted to use <a href="https://tailwindcss.com/">Tailwind CSS</a> after seeing some other portfolio sites designed with it, so I found <a href="https://dev.to/divrhino/how-to-add-tailwindcss-to-your-hugo-site-5290">this excellent blog post</a> on how to integrate Tailwind CSS into Hugo and started laying things out. I used the Hugo <a href="https://github.com/colorchestra/smol">smol theme</a> and the Hugo docs to get a handle on how to structure my templates and content in my Hugo site. Skip ahead a few hours of building templates and adding content, and add in a custom domain and <a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">Github Actions pipeline</a>, and ross.grattafiori.dev was up and running!</p>
+<p>I did run into a small problem with the Hugo markdown rendering and Tailwind CSS, which I may make another post about. This was eventually remedied by a combination of <a href="https://gohugo.io/content-management/shortcodes/">Hugo shortcodes</a> and customizing base elements with Tailwind CSS.</p>
+<h2 id="what-should-the-site-look-like">What should the site look like?</h2>
+<p>In its current state, this site is minimalist. I went with white text on a black background as the default, mostly because I often find myself enabling the Dark Reader extension on my browser for websites with too much white background. At one point I tried to add a nice minimalistic nature photo to the home page, but this proved to be much more difficult than I had anticipated, and I decided that the photo did not add enough value to continue pursuing its implementation.</p>
+<p>I tried to forgo text wherever possible in favor of icons to cut down on clutter and give the site a cleaner look. There is plenty of space in the navbar to add more icons should I want to add more pages.</p>
+<p>That&rsquo;s pretty much it. The site is very basic and not much to look at. There is no fancy CSS or javascript, no in-browser game engines or hidden easter eggs, not even an RSS feed yet. As I mentioned in the second section above, my goal was to get a site up and running as quickly and painlessly as possible, which I feel I achieved albeit some slight hiccups. In the future I may add fanciness or not, but right now my theory is the content of the site is more important that the style of the site. In that vein, I intend to focus on improving the quality of my blog posts over the look and feel of the my site design.</p>
+<h2 id="closing-notes">Closing notes</h2>
+<p>That&rsquo;s the end of my first blog post! I&rsquo;m pretty excited that I now have a place to post my tech-related thoughts. Here&rsquo;s to hoping that this isn&rsquo;t also my last blog post.</p>
+</p>
+    </div>
+</div>
+</main>
+            <footer class="mt-auto"><div class="flex flex-row gap-5 justify-center py-10">
+    <p class="text-xs">Made with <a class="underline" href="https://gohugo.io/">Hugo</a> and <a class="underline"
+            href="https://tailwindcss.com/">Tailwind CSS</a></p>
+</div></footer>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Website</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on Website</description>
+    <generator>Hugo 0.125.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 11 Feb 2024 12:03:10 -0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello World</title>
+      <link>http://localhost:1313/posts/initial-post/</link>
+      <pubDate>Sun, 11 Feb 2024 12:03:10 -0500</pubDate>
+      <guid>http://localhost:1313/posts/initial-post/</guid>
+      <description>This is the first ever post for the third iteration of my personal website that now features blogging thanks to the excellent Hugo static site generator. In this post I want to explain my thoughts about what should go on the site, touch on some of the technologies used to build the site, and briefly discuss my thoughts on the look of the site.&#xA;What should go on the website? The software engineer/developer portfolio websites I have seen usually look similar to a resume, with sections such as &amp;ldquo;work experience&amp;rdquo;, &amp;ldquo;education&amp;rdquo;, &amp;ldquo;skills&amp;rdquo;, etc.</description>
+    </item>
+  </channel>
+</rss>
