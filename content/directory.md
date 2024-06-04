@@ -6,31 +6,47 @@
 
 ## Blogs
 
-* [eli.thegreenplace.net](https://eli.thegreenplace.net/) - Eli Bendersky's personal website
-* [mtlynch.io](mtlynch.io) - Michael Lynch's personal website
-* [sohamkamani.com](https://www.sohamkamani.com/archive/) - Soham Kanami's blog, features some excellent examples and tutorials for Golang
-* [engineering.atspotify.com](https://engineering.atspotify.com/) - Spotify Engineering Blog
+* [Eli Bendersky](https://eli.thegreenplace.net/)
+* [Michael Lynch](https://mtlynch.io)
+* [NYU Professor Scott Galloway](https://profgalloway.com)
+* [Soham Kanami](https://www.sohamkamani.com/archive/)
+* [Spotify Engineering](https://engineering.atspotify.com/)
+* [Strava Engineering](https://medium.com/strava-engineering)
+* [Garmin](https://www.garmin.com/en-US/blog/)
 
-## Educational
+## Resources
 
-* [bulletin.engin.umich.edu/courses/eecs/](https://bulletin.engin.umich.edu/courses/eecs/) - University of Michigan EECS course guide
-* [open.umich.edu](https://open.umich.edu/) - University of Michigan open course material
-* [ocw.mit.edu](https://ocw.mit.edu) - MIT Open Courseware
-* [learnxinyminutes.com](Https://learnxinyminutes.com/) - Quick tours of selected algorithms, data structures, languages, and tools
-* [betterexplained.com](https://betterexplained.com/archives/) - Excellent math explainers
-* [gobyexample.com](https://gobyexample.com) - Golang examples
-* [beej.us/guides](https://beej.us/guide) - Brian Hall guides, includes socket programming guide
-* [cp-algorithms.com](https://cp-algorithms.com/) - Algorithms for competitive programming
+* [University of Michigan EECS Course Guide](https://bulletin.engin.umich.edu/courses/eecs/)
+* [University of Michigan Open Courseware](https://open.umich.edu/)
+* [MIT Open Courseware](https://ocw.mit.edu)
+* [learnxinyminutes.com](Https://learnxinyminutes.com/)
+* [Math Explainers](https://betterexplained.com/archives/)
+* [Golang Examples](https://gobyexample.com)
+* [Beej's Guide to Network Programming](hhttps://beej.us/guide/bgnet/html/split/)
+* [Competitive Programming Algorithms](https://cp-algorithms.com/)
+* [Learning Synthesizers](https://learningsynths.ableton.com/)
+* [Google Style Guides](https://google.github.io/styleguide/)
+* [Open Source Iconography](https://pictogrammers.com/)
+
+## Read the Docs
+
+* [Golang](https://go.dev/doc/)
+* [Angular](https://angular.dev/)
+* [Web Docs](https://developer.mozilla.org/en-US/)
 
 ## Models
 
-* [falstad.com/circuit](https://www.falstad.com/circuit/) - An applet for simulating circuits
-* [madebyevan.com/fsm](https://madebyevan.com/fsm/) - A finite state machine designer
-* [turingmachine.io](https://turingmachine.io/) - A full Turing Machine simulator
-* [regexr.com](https://regexr.com/) - Interactive Regex generator
+* [Circuits Applet](https://www.falstad.com/circuit/)
+* [Finate State Machine Designer](https://madebyevan.com/fsm/)
+* [Turing Machine](https://turingmachine.io/)
+* [Regex Generator](https://regexr.com/)
 
 ## News
-* [news.ycombinator.com](https://news.ycombinator.com/) - Hacker News
+* [Hacker News](https://news.ycombinator.com/)
+* [Wired](https://wired.com)
+* [Ars Technica](https://arstechnica.com)
+* [TechCrunch](https://techcrunch.com)
+* [IEEE Spectrum](https://spectrum.ieee.org/)
 
 ## Reference
 * [FCC Frequency Allocation Spectrum (2016)](https://www.ntia.doc.gov/files/ntia/publications/january_2016_spectrum_wall_chart.pdf)
