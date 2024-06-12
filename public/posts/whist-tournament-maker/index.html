@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html class="bg-stone-950" lang="en-us">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    
+    
+    <link rel="stylesheet" href="/styles.2024-06-12%2012:26:12.701185%20-0400%20EDT%20m=&#43;0.181671376.css">
+    
+    <title>Whist Tournaments for Euchre - Ross Grattafiori</title>
+</head>
+
+<body class="text-stone-300 font-mono">
+    <div class="container lg mx-auto">
+        <div class="flex flex-col min-h-screen">
+            <header class="bg-stone-900  border-stone-800 border rounded sticky top-1 p-3"><div class="hidden sm:block sm:float-left">
+    <p class="text-2xl font-extrabold py-0">ross.grattafiori.dev</p>
+</div>
+<div class="place-content-center sm:float-right flex flex-row ml-auto gap-5">
+    <a href="/" class="fill-stone-200 hover:fill-stone-500">
+        <svg class="w-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <title>Home</title>
+            <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" />
+        </svg>
+    </a>
+    
+    <a href="/directory" class="fill-stone-200 hover:fill-stone-500">
+        <svg class="w-8" xmlns="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <title>Directory</title>
+            <path d="M10,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V8C22,6.89 21.1,6 20,6H12L10,4Z" />
+        </svg>
+    </a>
+    <a href="/posts" class="fill-stone-200 hover:fill-stone-500">
+        <svg class="fill-stone-200 hover:fill-stone-500 w-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <title>Blog</title>
+            <path d="M3 3V21H21V3H3M18 18H6V17H18V18M18 16H6V15H18V16M18 12H6V6H18V12Z" />
+        </svg>
+    </a>
+</div></header>
+            <main class="mt-10">
+<div>
+    <div class="flex flex-col gap-2 pb-5">
+        <div>
+            <h1 class="font-extrabold text-4xl">Whist Tournaments for Euchre</h1>
+        </div>
+        <div class="flex flex-row gap-5">
+            <p class="text-sm">Jun 03, 2024</p>
+            <p class="text-sm">6-minute read</p>
+            <p class="text-sm">
+            
+                <a class="underline" href="/tags/combinatorics">combinatorics</a>
+            
+                <a class="underline" href="/tags/angular">angular</a>
+            
+                <a class="underline" href="/tags/golang">golang</a>
+            
+            </p>
+        </div>
+    </div>
+    <div>
+        <p><p>My dad has a friend that holds an annual Euchre tournament each year on St. Patties day. It&rsquo;s a pretty big deal, anywhere from 20-30 people will show up to see who takes home a hefty cash prize. The format is unique and very similar to a round-robin style tournament, but with a twist. Each round the teams are randomly chose via each person pulling a piece of paper out of a hat. The system is simple, but there are some problems such as players playing each other multiple times or having the same partner multiple times, which is why I was approached to write a program to improve the process.</p>
+<p>I was only given one constraint, and that was: make it such that each person has every other person as a partner exactly once. I am happy to say that I was able to produce a product to solve this problem. Below I am going to detail my journey of building this app as well as what I learned from my mistakes and successes.</p>
+<h2 id="false-starts">False Starts</h2>
+<h3 id="no-1---backtracking">No. 1 - Backtracking</h3>
+<p>After having done some leetcode exercies on backtracking, specifically on how to generate combinations while backtracking, I thought that I knew the solution right away. I would generate all of the possible team combinations, then pair those team combinations together to create the tables for each round.</p>
+<p>I figured I could do this with any arbitrary number of players and just have 1-3 players sit out each round with a bye.</p>
+<p>To begin I created several data structures:</p>
+<ul>
+<li><strong>Tourney</strong>, which represents the tournament and holds all the rounds</li>
+<li><strong>Round</strong>, which holds an array of Tables</li>
+<li><strong>Table</strong>, which holds two Teams</li>
+<li><strong>Team</strong>, which holds two Players</li>
+</ul>
+<p>Really basic stuff. Using those data structures, I attempted to implement a backtracking solution that would recurse over each round, table, and team, and attempt to fill each until there were no more combinations. The idea was that if the program reached a point where it could no longer fill a table, it would backtrack and try new combinations until something fit.</p>
+<p>The initial solution looked something like this:</p>
+<pre tabindex="0"><code class="language-pseudocode" data-lang="pseudocode">generate all combinations for N players choose 
+backtrack(combinations, used_players_for_round, used_combinations)
+   if used_combinations equals combinations length
+      all done
+   for all unused combinations
+      if the players in the combination are not in used_players for round 
+         AND there is not one player on both teams
+         add the team to a table
+         add combination to used_combinations
+         add players on the team to used_players_for_round
+         backtrack(combinations, used_players_for_round, used_combinations)
+         remove team from table
+         remove combination from used_combinations
+         remove players from used_players_for_round</code></pre>
+<p>This did not work.</p>
+<p>My skill at deriving Big O complexities leaves much to be desired and I do not remember much about the master theorem besides its name (or if it is even applicable in this situation), but if I was going to take a stab at guessing, I would guess code is O(N^N) or worse. Basically this solution ran forever even at what I considered to be the very small inputs such as 16 players.</p>
+<p>Back to the drawing board.</p>
+<h3 id="no-2---usage-matrix">No. 2 - Usage Matrix</h3>
+<p>At this point I really should have stepped back and done some research to see if there was any existing literature or algorithms on what appeared to be an increasingly unique problem. Doing so would have likely saved me hours of headache and wheel spinning. I did not do this, partially because for I went on vacation for a period where I sat on a beach for several days straight without any internet access, and partially because I thought it would be really cool to come up with a custom algorithm by myself. The result was sitting in the sun with a notepad and paper and trying to rough out a new algorithm, when I probably should have been reading books on Combinatoric Desingn.</p>
+<p>The first thing I decided to do this time around was to decrease the scope of the problem. In the first false start I attempted to come up with a solution that would work for any amount of players on a team and any amount of teams in a table. I scrapped this and decided to fix the number of players per team at 2, and the number of teams per table also at 2. This would work fine for a Euchre tournament.</p>
+<p>=== TODO ===
+The next idea I tried was a usage matrix. I created an array of sets for each other players. Each player had a set representing who they had been partnered with.</p>
+<p>The solution looked something like this:</p>
+<pre tabindex="0"><code class="language-pseudocode" data-lang="pseudocode"></code></pre>
+<p>The problem persists. What to do next?</p>
+<h2 id="stepping-back-and-doing-some-research">Stepping back and doing some research</h2>
+<p>=== TODO ===
+After two false starts I realized that maybe this problem wasn&rsquo;t as simple as I thought. I did a few various deep dives and</p>
+<p>A dive down the math stack exchange rabbit hole lead me to my knio</p>
+<h3 id="whist-tournaments-durango-bill-and-richard-a-venezia">Whist Tournaments, Durango Bill and Richard A. Venezia</h3>
+<h2 id="implementation">Implementation</h2>
+<p>Having finally figured out how to generate the rounds, I started building the web app.</p>
+<p>This first thing I did was write a Go program to parse out all of the starting rounds on Durango Bill&rsquo;s website into JSON. The program continually loops and reads in an input.txt file which it expects to be in the starting round format defined by Durango Bill. It extracts the number of tables, then for each table the two teams, then for each team the two players. It stores all of that information in structs before marshaling the structs to JSON and concatenating them to the reset of the starting rounds. After running the parser I added the starting rounds for players 4 - 16 by hand from Richard A. Venezia&rsquo;s site.</p>
+<p>=== TODO ===</p>
+<p>The second thing I did was to build the app itself. I used Angular mostly because I am a huge fan of Golang and figured if Google could build a language that good, then maybe their web framework was equally as good. The Angular app has no routes and only two components, one to add all of the players and one to show the rounds for each player. It&rsquo;s really exactly like Richard A. Venezias tables but with the added feature of displaying the names you entered.</p>
+<p>Finallyh I deployed the finished product to github pages and texted my dad that his friend&rsquo;s new toy was ready to be played with.</p>
+<p>You can check out the app yourself at: <a href="https://ross.grattafiori.dev/wtm">https://ross.grattafiori.dev/wtm</a></p>
+<p>The source code is present at: <a href="https://github.com/rossgrat/wtm">https://github.com/rossgrat/wtm</a></p>
+<h2 id="closing-thoughts">Closing Thoughts</h2>
+<h3 id="what-i-learned">What I Learned</h3>
+<ul>
+<li>Basic Angular fundamentals such as components and templates</li>
+<li>Do some research on your topic instead of diving right in (duh.)</li>
+</ul>
+<h3 id="future-actions">Future Actions</h3>
+<ul>
+<li>Big O Notation, I need to get better at this and practice often, especially for difficult problems, so I know when to hold em&rsquo; and when to fold em'</li>
+</ul>
+<h3 id="whats-next">What&rsquo;s Next?</h3>
+<p>The next project I think I am going to tackle is an idea for a laundry sharing web app that I had about a month ago. TLDR; my apartment has fixed laundry days, but sometimes I need to clean stuff on days that are not my laundry day. Solution: build an app where my neighbors can share their laundry time with each other.</p>
+<p>These are some of the things I am hoping to learn and practice with this next project:</p>
+<ul>
+<li>Reverse Proxy via Caddy</li>
+<li>Websockets</li>
+<li>Progressive Web Apps</li>
+<li>Web Push Notifications</li>
+<li>Session Management in Angular</li>
+<li>Somne lightwight DB like SQLite or LevelDB</li>
+</ul>
+<h3 id="references">References</h3>
+<ul>
+<li><a href="https://www.durangobill.com/BridgeCyclicSolutions.html">Durango Bill&rsquo;s Starting Rounds</a></li>
+<li><a href="https://www.devenezia.com/downloads/round-robin/rounds.php?it=12&amp;v=w1">Richard A. Venezia&rsquo;s Round Robin Page</a></li>
+</ul>
+</p>
+    </div>
+</div>
+</main>
+            <footer class="mt-auto"><div class="flex flex-row gap-5 justify-center py-10">
+    <p class="text-xs">Made with <a class="underline" href="https://gohugo.io/">Hugo</a> and <a class="underline"
+            href="https://tailwindcss.com/">Tailwind CSS</a></p>
+</div></footer>
+        </div>
+    </div>
+</body>
+
+</html>

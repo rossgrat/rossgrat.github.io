@@ -1,6 +1,6 @@
 {
    "date": "2024-06-03T19:52:20-04:00",
-   "draft": false,
+   "draft": true,
    "title": "Whist Tournaments for Euchre",
    "tags" : [
          "combinatorics",
@@ -53,7 +53,7 @@ My skill at deriving Big O complexities leaves much to be desired and I do not r
 Back to the drawing board.
 
 ### No. 2 - Usage Matrix
-At this point I really should have stepped back and done some research to see if there was any existing literature or algorithms on what appeared to be an increasingly unique problem. Doing so would have likely saved me hours of headache and wheel spinning. I did not do this, partially because for I went on vacation for a period where I sat on a beach for several days straight without any internet access, and partially because I thought it would be really cool to come up with a custom algorithm by myself. The result was sitting in the sun with a notepad and paper and trying to rough out a new algorithm, when I probably sould have been reading books on Combinatoric Desing.
+At this point I really should have stepped back and done some research to see if there was any existing literature or algorithms on what appeared to be an increasingly unique problem. Doing so would have likely saved me hours of headache and wheel spinning. I did not do this, partially because for I went on vacation for a period where I sat on a beach for several days straight without any internet access, and partially because I thought it would be really cool to come up with a custom algorithm by myself. The result was sitting in the sun with a notepad and paper and trying to rough out a new algorithm, when I probably should have been reading books on Combinatoric Desingn.
 
 The first thing I decided to do this time around was to decrease the scope of the problem. In the first false start I attempted to come up with a solution that would work for any amount of players on a team and any amount of teams in a table. I scrapped this and decided to fix the number of players per team at 2, and the number of teams per table also at 2. This would work fine for a Euchre tournament.
 
