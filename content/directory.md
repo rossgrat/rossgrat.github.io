@@ -4,11 +4,16 @@
    "type": "page"
 }
 
+A digital garden of links to interesting or frequently visited places.
+
+## Project Showcase
+* [Whist Tournament Maker](https://ross.grattafiori.dev/wtm)
+
 ## Blogs
 
 * [Eli Bendersky](https://eli.thegreenplace.net/)
 * [Michael Lynch](https://mtlynch.io)
-* [NYU Professor Scott Galloway](https://profgalloway.com)
+* [Scott Galloway](https://profgalloway.com)
 * [Soham Kanami](https://www.sohamkamani.com/archive/)
 * [Spotify Engineering](https://engineering.atspotify.com/)
 * [Strava Engineering](https://medium.com/strava-engineering)
