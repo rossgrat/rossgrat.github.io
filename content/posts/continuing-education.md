@@ -7,7 +7,7 @@
    ]
 }
 
-Edit - July 15th, 2024:
+**Edit - July 15th, 2024**:
 After about a month of attempting this system I am putting it on pause. There are a few problems I have encountered thus far:
 
 * Despite setting a goal of 7 hours per week, I have not put in place a real system to achieve this goal.
@@ -19,7 +19,7 @@ To be clear I am not putting my continuous education on pause, just the system c
 
 I am going to review and improve my plan below upon finishing two books I am currently working through: Atomic Habits by James Clear, and Slow Productivity by Cal Newport.
 
-Original Post:
+**Original Post**:
 
 One of the biggest things I miss the most about college is the constant learning. Every day I was exposed to new concepts and ideas. Although I feel that I have learned a lot in my short professional career, there are some pitfalls that I have noticed.
 
