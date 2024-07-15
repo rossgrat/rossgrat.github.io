@@ -1,6 +1,6 @@
 {
    "date": "2024-06-12T11:32:34-04:00",
-   "draft": true,
+   "draft": false,
    "title": "Continuing my education",
    "tags" : [
       "continous learning"
