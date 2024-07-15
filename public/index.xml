@@ -6,21 +6,21 @@
     <description>Recent content on Website</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 12 Jun 2024 11:32:34 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 15 Jul 2024 17:41:56 -0400</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Whist Tournaments for Euchre</title>
+      <link>http://localhost:1313/posts/whist-tournament-maker/</link>
+      <pubDate>Mon, 15 Jul 2024 17:41:56 -0400</pubDate>
+      <guid>http://localhost:1313/posts/whist-tournament-maker/</guid>
+      <description>My dad has a friend that holds an annual Euchre tournament each year on St. Patties day. It&amp;rsquo;s a pretty big deal, anywhere from 20-30 people will show up to see who takes home a non-trivial cash prize. The format is unique and very similar to a round-robin style tournament, but with a twist. Each round the teams are randomly chosen via each person pulling a piece of paper out of a hat.</description>
+    </item>
     <item>
       <title>Continuing my education</title>
       <link>http://localhost:1313/posts/continuing-education/</link>
       <pubDate>Wed, 12 Jun 2024 11:32:34 -0400</pubDate>
       <guid>http://localhost:1313/posts/continuing-education/</guid>
-      <description>One of the biggest things I miss the most about college is the constant learning. Every day I was exposed to new concepts and ideas. Although I feel that I have learned a lot in my short professional career, there are some pitfalls that I have noticed.&#xA;I feel that it is entirely too easy to slip into a rut of complacency at work. Once I have figured out what does the job, what incentive do I have to try and make that thing better?</description>
-    </item>
-    <item>
-      <title>Whist Tournaments for Euchre</title>
-      <link>http://localhost:1313/posts/whist-tournament-maker/</link>
-      <pubDate>Mon, 03 Jun 2024 19:52:20 -0400</pubDate>
-      <guid>http://localhost:1313/posts/whist-tournament-maker/</guid>
-      <description>My dad has a friend that holds an annual Euchre tournament each year on St. Patties day. It&amp;rsquo;s a pretty big deal, anywhere from 20-30 people will show up to see who takes home a hefty cash prize. The format is unique and very similar to a round-robin style tournament, but with a twist. Each round the teams are randomly chose via each person pulling a piece of paper out of a hat.</description>
+      <description>Edit - July 15th, 2024: After about a month of attempting this system I am putting it on pause. There are a few problems I have encountered thus far:&#xA;Despite setting a goal of 7 hours per week, I have not put in place a real system to achieve this goal. 7 hours per week is difficult to achieve during weeks of extended work or vacation, the system does not account for this.</description>
     </item>
     <item>
       <title>Hello World</title>
@@ -34,7 +34,7 @@
       <link>http://localhost:1313/directory/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/directory/</guid>
-      <description>A digital garden of links to interesting or frequently visited places.&#xA;Project Showcase Whist Tournament Maker Blogs Eli Bendersky Michael Lynch Scott Galloway Soham Kanami Spotify Engineering Strava Engineering Garmin Resources University of Michigan EECS Course Guide University of Michigan Open Courseware MIT Open Courseware learnxinyminutes.com Math Explainers Golang Examples Beej&amp;rsquo;s Guide to Network Programming Competitive Programming Algorithms Learning Synthesizers Google Style Guides Open Source Iconography Read the Docs Golang Angular Web Docs Models Circuits Applet Finate State Machine Designer Turing Machine Regex Generator News Hacker News Wired Ars Technica TechCrunch IEEE Spectrum Reference FCC Frequency Allocation Spectrum (2016) </description>
+      <description>A digital garden of links to interesting or frequently visited places.&#xA;Project Showcase Whist Tournament Maker Blogs Eli Bendersky Michael Lynch Scott Galloway Soham Kanami Spotify Strava Garmin Proton Resources University of Michigan EECS Course Guide University of Michigan Open Courseware MIT Open Courseware learnxinyminutes.com Math Explainers Golang Examples Beej&amp;rsquo;s Guide to Network Programming Competitive Programming Algorithms Learning Synthesizers Google Style Guides Open Source Iconography Read the Docs Golang Angular Web Docs Models Circuits Applet Finate State Machine Designer Turing Machine Regex Generator News Hacker News Wired Ars Technica TechCrunch IEEE Spectrum Reference FCC Frequency Allocation Spectrum (2016) </description>
     </item>
   </channel>
 </rss>

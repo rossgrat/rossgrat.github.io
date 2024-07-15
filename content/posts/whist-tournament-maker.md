@@ -1,5 +1,5 @@
 {
-   "date": "2024-07-15T19:35:20-04:00",
+   "date": "2024-07-15T17:41:56-04:00",
    "draft": false,
    "title": "Whist Tournaments for Euchre",
    "tags" : [

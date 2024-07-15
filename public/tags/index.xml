@@ -16,27 +16,6 @@
       <description></description>
     </item>
     <item>
-      <title>Angular</title>
-      <link>http://localhost:1313/tags/angular/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/angular/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Combinatorics</title>
-      <link>http://localhost:1313/tags/combinatorics/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/combinatorics/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Golang</title>
-      <link>http://localhost:1313/tags/golang/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/golang/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Website</title>
       <link>http://localhost:1313/tags/website/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
