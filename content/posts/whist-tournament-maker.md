@@ -68,7 +68,8 @@ while we can partner players from the usage matrix
    while all tables in a round not full
       for player in player IDs
          for partner in players IDs
-            if player has not been partnered AND player has not been used this round AND partner has not been used this round
+            if player has not been partnered AND player has not been used 
+            this round AND partner has not been used this round
                add team to table
                add partner to player used partners
                add player to partner used partners
