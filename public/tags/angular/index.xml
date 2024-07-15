@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Angular on Website</title>
+    <link>http://localhost:1313/tags/angular/</link>
+    <description>Recent content in Angular on Website</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 03 Jun 2024 19:52:20 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/angular/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Whist Tournaments for Euchre</title>
+      <link>http://localhost:1313/posts/whist-tournament-maker/</link>
+      <pubDate>Mon, 03 Jun 2024 19:52:20 -0400</pubDate>
+      <guid>http://localhost:1313/posts/whist-tournament-maker/</guid>
+      <description>My dad has a friend that holds an annual Euchre tournament each year on St. Patties day. It&amp;rsquo;s a pretty big deal, anywhere from 20-30 people will show up to see who takes home a hefty cash prize. The format is unique and very similar to a round-robin style tournament, but with a twist. Each round the teams are randomly chose via each person pulling a piece of paper out of a hat.</description>
+    </item>
+  </channel>
+</rss>

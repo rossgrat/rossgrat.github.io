@@ -15,9 +15,10 @@ A digital garden of links to interesting or frequently visited places.
 * [Michael Lynch](https://mtlynch.io)
 * [Scott Galloway](https://profgalloway.com)
 * [Soham Kanami](https://www.sohamkamani.com/archive/)
-* [Spotify Engineering](https://engineering.atspotify.com/)
-* [Strava Engineering](https://medium.com/strava-engineering)
+* [Spotify](https://engineering.atspotify.com/)
+* [Strava](https://medium.com/strava-engineering)
 * [Garmin](https://www.garmin.com/en-US/blog/)
+* [Proton](https://proton.me/blog/)
 
 ## Resources
 
