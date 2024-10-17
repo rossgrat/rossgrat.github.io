@@ -13,7 +13,6 @@ A digital garden of links to interesting or frequently visited places.
 
 * [Eli Bendersky](https://eli.thegreenplace.net/)
 * [Michael Lynch](https://mtlynch.io)
-* [Scott Galloway](https://profgalloway.com)
 * [Soham Kanami](https://www.sohamkamani.com/archive/)
 * [Spotify](https://engineering.atspotify.com/)
 * [Strava](https://medium.com/strava-engineering)
