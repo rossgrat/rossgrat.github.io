@@ -11,15 +11,25 @@ A digital garden of links to interesting or frequently visited places.
 
 ## Blogs
 
+### People
+
 * [Eli Bendersky](https://eli.thegreenplace.net/)
+* [Mark McGranaghan](https://markmcgranaghan.com/)
 * [Michael Lynch](https://mtlynch.io)
+* [Russ Cox](https://research.swtch.com/)
 * [Soham Kanami](https://www.sohamkamani.com/archive/)
-* [Spotify](https://engineering.atspotify.com/)
-* [Strava](https://medium.com/strava-engineering)
+
+### Companies
+
 * [Garmin](https://www.garmin.com/en-US/blog/)
 * [Proton](https://proton.me/blog/)
+* [Spotify](https://engineering.atspotify.com/)
+* [Strava](https://medium.com/strava-engineering)
+* [Stripe](https://stripe.com/blog/engineering)
 
 ## Resources
+
+### Programming
 
 * [University of Michigan EECS Course Guide](https://bulletin.engin.umich.edu/courses/eecs/)
 * [University of Michigan Open Courseware](https://open.umich.edu/)
@@ -27,17 +37,20 @@ A digital garden of links to interesting or frequently visited places.
 * [learnxinyminutes.com](Https://learnxinyminutes.com/)
 * [Math Explainers](https://betterexplained.com/archives/)
 * [Golang Examples](https://gobyexample.com)
-* [Beej's Guide to Network Programming](hhttps://beej.us/guide/bgnet/html/split/)
+* [Beej's Guide to Network Programming](https://beej.us/guide/bgnet/html/split/)
 * [Competitive Programming Algorithms](https://cp-algorithms.com/)
-* [Learning Synthesizers](https://learningsynths.ableton.com/)
-* [Google Style Guides](https://google.github.io/styleguide/)
 * [Open Source Iconography](https://pictogrammers.com/)
+
+### Misc
+* [Learning Synthesizers](https://learningsynths.ableton.com/)
+* [Learning Music](https://learningmusic.ableton.com/)
 
 ## Read the Docs
 
 * [Golang](https://go.dev/doc/)
-* [Angular](https://angular.dev/)
+* [Google Style Guides](https://google.github.io/styleguide/)
 * [Web Docs](https://developer.mozilla.org/en-US/)
+* [Angular](https://angular.dev/)
 
 ## Models
 
