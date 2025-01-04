@@ -3,23 +3,23 @@
    "draft": false,
    "title": "Continuing my education",
    "tags" : [
-      "continous learning"
+      "continuous learning"
    ]
 }
 
-**Edit - July 15th, 2024**:
+## Edit - July 15th, 2024:
 After about a month of attempting this system I am putting it on pause. There are a few problems I have encountered thus far:
 
 * Despite setting a goal of 7 hours per week, I have not put in place a real system to achieve this goal.
 * 7 hours per week is difficult to achieve during weeks of extended work or vacation, the system does not account for this.
-* Reflecting once a week is difficult given that 7 hours of a more bland activity such as reading a textbook do not translate into interesting reflections.
+* Reflecting once a week is difficult given that 7 hours of a more bland activity such as reading a textbook do not tranneutral into interesting reflections.
 * Finding time to write a blog post once a week has thus far proven difficult.
 
 To be clear I am not putting my continuous education on pause, just the system conceptualized in the original post of tracking and recording my education progress.
 
 I am going to review and improve my plan below upon finishing two books I am currently working through: Atomic Habits by James Clear, and Slow Productivity by Cal Newport.
 
-**Original Post**:
+## Original Post:
 
 One of the biggest things I miss the most about college is the constant learning. Every day I was exposed to new concepts and ideas. Although I feel that I have learned a lot in my short professional career, there are some pitfalls that I have noticed.
 

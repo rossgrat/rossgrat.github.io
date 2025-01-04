@@ -1,31 +1,52 @@
-<div class="hidden sm:block sm:float-left">
+<div class="flex flex-row container lg:w-lg mx-auto px-5">
     <a href="/" class="no-underline">
-        <p class="text-2xl font-extrabold py-0">ross.grattafiori.dev</p>
+        <p class="text-2xl font-extrabold py-0 font-mono">ross.grattafiori.dev</p>
     </a>
-</div>
-<div class="place-content-center sm:float-right flex flex-row ml-auto gap-5">
-    <a href="/" class="fill-stone-200 hover:fill-stone-500 sm:hidden">
-        <svg class="w-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <title>Home</title>
-            <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" />
-        </svg>
-    </a>
-    <!-- <a href="/projects" class="fill-stone-200 hover:fill-stone-500">
-        <svg class="w-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <title>Projects</title>
-            <path d="M21.71 20.29L20.29 21.71A1 1 0 0 1 18.88 21.71L7 9.85A3.81 3.81 0 0 1 6 10A4 4 0 0 1 2.22 4.7L4.76 7.24L5.29 6.71L6.71 5.29L7.24 4.76L4.7 2.22A4 4 0 0 1 10 6A3.81 3.81 0 0 1 9.85 7L21.71 18.88A1 1 0 0 1 21.71 20.29M2.29 18.88A1 1 0 0 0 2.29 20.29L3.71 21.71A1 1 0 0 0 5.12 21.71L10.59 16.25L7.76 13.42M20 2L16 4V6L13.83 8.17L15.83 10.17L18 8H20L22 4Z" />
-        </svg>
-    </a> -->
-    <a href="/directory" class="fill-stone-200 hover:fill-stone-500">
-        <svg class="w-8" xmlns="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <a href="/directory" class="hidden sm:inline-block ml-auto fill-neutral-200 hover:fill-neutral-500">
+        <svg class=" w-8" xmlns="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <title>Directory</title>
             <path d="M10,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V8C22,6.89 21.1,6 20,6H12L10,4Z" />
         </svg>
     </a>
-    <a href="/posts" class="fill-stone-200 hover:fill-stone-500">
-        <svg class="fill-stone-200 hover:fill-stone-500 w-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <a href="/posts" class="hidden sm:inline-block fill-neutral-200 hover:fill-neutral-500 pl-5">
+        <svg class=" w-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <title>Blog</title>
             <path d="M3 3V21H21V3H3M18 18H6V17H18V18M18 16H6V15H18V16M18 12H6V6H18V12Z" />
         </svg>
     </a>
+    <div class="ml-auto pl-5 sm:hidden cursor-pointer fill-neutral-200 hover:fill-neutral-500">
+        <div id="menu-dropdown">
+            <svg class=" w-8" height="32px" viewBox="0 0 32 32" width="32px" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/>
+            </svg>
+        </div>
+    </div>
 </div>
+<div id="menu-block" class="sm:hidden relative flex flex-col overflow-hidden gap-2" style="height:0px;">
+    <hr class="mt-2">
+    <a href="/directory" class="flex flex-row items-center fill-neutral-200 hover:fill-neutral-500 no-underline">
+        <svg class="w-8" xmlns="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <title>Directory</title>
+            <path d="M10,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V8C22,6.89 21.1,6 20,6H12L10,4Z" />
+        </svg>
+        <p class="ml-2">Directory</p>
+    </a>
+    <a href="/posts" class="flex flex-row items-center fill-neutral-200 hover:fill-neutral-500 no-underline">
+        <svg class="w-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <title>Blog</title>
+            <path d="M3 3V21H21V3H3M18 18H6V17H18V18M18 16H6V15H18V16M18 12H6V6H18V12Z" />
+        </svg>
+        <p class="ml-2">Posts</p>
+    </a>
+</div>
+
+<script>
+    const menuIcon = document.getElementById('menu-dropdown');
+    const menuBlock = document.getElementById('menu-block')
+
+    menuIcon.addEventListener('click', function() {
+        console.log("TEST")
+        menuBlock.style.height= menuBlock.style.height === '0px' ? 'auto' : '0px';
+    });
+
+</script>

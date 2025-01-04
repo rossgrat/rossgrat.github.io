@@ -21,28 +21,30 @@
     }
     pre {
         @apply border;
-        @apply border-stone-600;
+        @apply border-neutral-600;
         @apply p-3;
         @apply text-sm;
         @apply my-3;
         @apply rounded;
+        @apply overflow-scroll;
     }
     a {
         @apply underline;
         @apply underline-offset-4;
-        @apply hover:hover:text-stone-500;
+        @apply hover:hover:text-neutral-500;
     }
     p{
         @apply py-2;
     }
     ol {
-        @apply list-decimal list-inside;
+        @apply list-decimal list-outside;
     }
     ul {
-        @apply list-disc list-inside;
+        @apply list-disc list-outside;
     }
     li {
         @apply py-1;
+        @apply ml-4;
     }
 
 }

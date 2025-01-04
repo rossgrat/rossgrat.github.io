@@ -6,14 +6,14 @@
     <description>Recent content in Golang on Website</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 03 Jun 2024 19:52:20 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 15 Jul 2024 17:41:56 -0400</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/golang/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Whist Tournaments for Euchre</title>
       <link>http://localhost:1313/posts/whist-tournament-maker/</link>
-      <pubDate>Mon, 03 Jun 2024 19:52:20 -0400</pubDate>
+      <pubDate>Mon, 15 Jul 2024 17:41:56 -0400</pubDate>
       <guid>http://localhost:1313/posts/whist-tournament-maker/</guid>
-      <description>My dad has a friend that holds an annual Euchre tournament each year on St. Patties day. It&amp;rsquo;s a pretty big deal, anywhere from 20-30 people will show up to see who takes home a non-trivial cash prize. The format is unique and very similar to a round-robin style tournament, but with a twist. Each round the teams are randomly chosen via each person pulling a piece of paper out of a hat.</description>
+      <description>&lt;p&gt;My dad has a friend that holds an annual Euchre tournament each year on St. Patties day. It&amp;rsquo;s a pretty big deal, anywhere from 20-30 people will show up to see who takes home a non-trivial cash prize. The format is unique and very similar to a round-robin style tournament, but with a twist. Each round the teams are randomly chosen via each person pulling a piece of paper out of a hat. The system is simple, but there are some problems such as players playing each other multiple times or having the same partner multiple times, which is why I was approached to write a program to improve the process.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

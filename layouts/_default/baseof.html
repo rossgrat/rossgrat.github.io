@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="bg-stone-950" lang="{{ .Site.LanguageCode | default " en-us" }}">
+<html class="bg-neutral-950" lang="{{ .Site.LanguageCode | default " en-us" }}">
 
 <head>
     <meta charset="UTF-8">
@@ -11,20 +11,20 @@
     | postCSS (dict "config" "./assets/css/postcss.config.js")
     | resources.ExecuteAsTemplate (printf "styles.%s.css" $time) $time
     }}
-    {{ if .Site.IsServer }}
-    <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
+    {{- if hugo.IsServer }}
+        <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
     {{ else }}
-    {{ $styles := $styles | minify | fingerprint | resources.PostCSS }}
-    <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
+        {{ $styles := $styles | minify | fingerprint | resources.PostCSS }}
+        <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
     {{ end }}
     <title>{{ .Title }} - Ross Grattafiori</title>
 </head>
 
-<body class="text-stone-300 font-mono">
-    <div class="container lg mx-auto">
+<body class="text-neutral-50 font-sans">
+    <div >
         <div class="flex flex-col min-h-screen">
-            <header class="bg-stone-900  border-stone-800 border rounded sticky top-1 p-3">{{ partial "header" . }}</header>
-            <main class="mt-10">{{ block "main" . }}{{ end }}</main>
+            <header class="bg-neutral-900 border-neutral-800 border fixed p-2 w-full">{{ partial "header" . }}</header>
+            <main class="container lg:w-lg mx-auto px-5 mt-20 ">{{ block "main" . }}{{ end }}</main>
             <footer class="mt-auto">{{ partial "footer" . }}</footer>
         </div>
     </div>

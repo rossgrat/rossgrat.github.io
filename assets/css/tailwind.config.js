@@ -6,16 +6,12 @@ module.exports = {
     `${themeDir}/content/**/*.md`
   ],
   theme: {
-    container: {
-        padding: {
-          DEFAULT: '1rem',
-          sm: '2rem',
-          lg: '10rem',
-          xl: '18rem',
-          '2xl': '26rem',
-        },
-      },
-    extend: {}
+    container: {},
+    extend: {
+      width: {
+        'lg': '1024px'
+      }
+    }
   },
   variants: {},
   plugins: []
