@@ -8,6 +8,7 @@ A digital garden of links to interesting or frequently visited places.
 
 ## Project Showcase
 * [Whist Tournament Maker](https://ross.grattafiori.dev/wtm)
+* [New Music Feed](https://wubzduh.grattafiori.dev)
 
 ## Blogs
 
