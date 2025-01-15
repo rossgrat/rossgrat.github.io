@@ -19,6 +19,7 @@ A digital garden of links to interesting or frequently visited places.
 * [Michael Lynch](https://mtlynch.io)
 * [Russ Cox](https://research.swtch.com/)
 * [Soham Kanami](https://www.sohamkamani.com/archive/)
+* [Justine Tunney](https://justine.lol/)
 
 ### Companies
 
