@@ -1,9 +1,10 @@
 {
    "date": "2024-06-12T11:32:34-04:00",
    "draft": false,
-   "title": "Continuing my education",
+   "title": "Continuing My Education",
    "tags" : [
-      "continuous learning"
+      "non-technical",
+      "educatio"
    ]
 }
 
@@ -12,7 +13,7 @@ After about a month of attempting this system I am putting it on pause. There ar
 
 * Despite setting a goal of 7 hours per week, I have not put in place a real system to achieve this goal.
 * 7 hours per week is difficult to achieve during weeks of extended work or vacation, the system does not account for this.
-* Reflecting once a week is difficult given that 7 hours of a more bland activity such as reading a textbook do not tranneutral into interesting reflections.
+* Reflecting once a week is difficult given that 7 hours of a more bland activity such as reading a textbook do not translate into interesting reflections.
 * Finding time to write a blog post once a week has thus far proven difficult.
 
 To be clear I am not putting my continuous education on pause, just the system conceptualized in the original post of tracking and recording my education progress.
@@ -41,8 +42,8 @@ I want these credit-hours to be as easy as possible to achieve. I should be able
 
 I mulled around the thought of excluding project work from the credit-hours for a while. My rationale was that I didn't want one project to consume me, and that by requiring the credit-hours be some activity other than my current project, I could build in breaks for myself. The downside to this is that what if I spend all of a Saturday working on something cool, now none of those hours count? If I am really engrossed in something I don't want to penalize myself for that. Project hours make the cut.
 
-At the end of each week (Sunday), I am going to reflect on what I learned in my 7 credit hours in a post. At the end of each season (finanical quarters are too corporate), I am going to reflect on my favorite things I learned, and if I was able to apply that knowledge in any areas of my life since learning it.
+At the end of each week (Sunday), I am going to reflect on what I learned in my 7 credit hours in a post. At the end of each season (financial quarters are too corporate), I am going to reflect on my favorite things I learned, and if I was able to apply that knowledge in any areas of my life since learning it.
 
-It is my hope that with this system I can take the time I spend doomscrolling the news or playing Pokemon on my phone and put it towards enriching myself. When I am 'bored' instead of mindlessly opening a web browser or an app, I can work on improving myself via knocking out credit-hours. By completing this baseline of self-investment I should be able to look back what what I have done and reassure myself that I am moving forward and not stagnating. 
+It is my hope that with this system I can take the time I spend doom-scrolling the news or playing Pokemon on my phone and put it towards enriching myself. When I am 'bored' instead of mindlessly opening a web browser or an app, I can work on improving myself via knocking out credit-hours. By completing this baseline of self-investment I should be able to look back what what I have done and reassure myself that I am moving forward and not stagnating. 
 
 There is so much interesting knowledge out there and I want to soak up as much of it as I can before I go. 

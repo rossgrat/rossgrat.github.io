@@ -3,9 +3,9 @@
    "draft": false,
    "title": "Whist Tournaments for Euchre",
    "tags" : [
-         "combinatorics",
-         "angular",
-         "golang"
+         "algorithms",
+         "go",
+         "frontend"
       ]
 }
 
@@ -17,7 +17,7 @@ I was only given one constraint, and that was: make it such that each person has
 In the past I have extensively researched a project before starting. Unfortunately, this time around, an abundance over overconfidence led me to start an implementation for this project without doing so not once, but twice, before finally coming to my senses. This section encapsulates both of these failures for posterity as a reminder to my future self to measure twice and cut once.
 
 ### No. 1 - Backtracking
-Upon starting this project I had recently done some backtracking exercises on leetcode, and thought I had a solution right away. I would generate all of the possible team combinations via backtracking, then pair those team combinations together to create the tables for each round. 
+Upon starting this project I had recently done some backtracking exercises on Leetcode, and thought I had a solution right away. I would generate all of the possible team combinations via backtracking, then pair those team combinations together to create the tables for each round. 
 
 I figured I could do this with any arbitrary number of players and just have 1-3 players sit out each round with a bye.
 
@@ -77,13 +77,13 @@ while we can partner players from the usage matrix
 
 That's a lot of nested loops. 
 
-This also did not work. The number of rounds should be equal to or greater than the number of players, because each player needs to partner with every other player exacrly once. This algorithm stopped well short of the correct number of rounds, and it appeared to be caused by the usage matrix entering a state where it could no longer assign tables, even though cominations remained. An example being: If player 1 and player 2 is a remaining combination, along with player 1 and player 3, we can't make a table out of this because both combinations contain player 1.
+This also did not work. The number of rounds should be equal to or greater than the number of players, because each player needs to partner with every other player exactly once. This algorithm stopped well short of the correct number of rounds, and it appeared to be caused by the usage matrix entering a state where it could no longer assign tables, even though combinations remained. An example being: If player 1 and player 2 is a remaining combination, along with player 1 and player 3, we can't make a table out of this because both combinations contain player 1.
 
-I tried a few tweaks to fix this such as adjusting where the iterative loops started, but this method begain to feel fruitless. After a while working on this approach I finally came to my senses and did what I should have done before writing the first line of code.
+I tried a few tweaks to fix this such as adjusting where the iterative loops started, but this method began to feel fruitless. After a while working on this approach I finally came to my senses and did what I should have done before writing the first line of code.
 
 ## Stepping back and doing some research
 
-A deep dive into the interwebs led by to a mathematics stack exchange post where someone posited a question about this very same tournament format, albeit for a different game. One of the answers led by to my two new heros, Richard A. Venezia and Durango Bill.
+A deep dive into the interwebs led by to a mathematics stack exchange post where someone posited a question about this very same tournament format, albeit for a different game. One of the answers led by to my two new heroes, Richard A. Venezia and Durango Bill.
 
 It turns out that this type of tournament design exists! And there is literature on it. In the blog of Richard A. Venezia, I found a short discussion where someone requested this style of a tournament for beach volleyball. Richard tried to come up with a solution on his own, which worked out semi-well, but also reached out to a friend, and this friend introduced Richard, the original question-asker, and now myself, to the tournament style that is called Whist.
 
@@ -123,7 +123,7 @@ The source code is present at: https://github.com/rossgrat/wtm
 * I learned some basic Angular fundamentals such as components, templates, and how these objects interact.
 * I learned that Angular is probably best for larger projects, and might be overkill for my little app.
 * I (re)learned that it is always best to do research and planning before starting an implementation
-* I learned about the Whist style tournament and what is neccessary to create one
+* I learned about the Whist style tournament and what is necessary to create one
 * I learned that I need to review and practice Big O notation
 
 Thanks for reading!
@@ -137,7 +137,7 @@ These are some of the things I am hoping to learn and practice with this next pr
 * Progressive Web Apps
 * Web Push Notifications
 * Session Management in Angular
-* Somne lightwight DB like SQLite or LevelDB
+* Some lightweight DB like SQLite or LevelDB
 
 ### References
 * [Durango Bill's Starting Rounds](https://www.durangobill.com/BridgeCyclicSolutions.html)
