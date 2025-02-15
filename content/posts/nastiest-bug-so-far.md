@@ -1,6 +1,6 @@
 {
    "date": "2025-01-20T16:29:40-05:00",
-   "draft": true,
+   "draft": false,
    "title": "The Nastiest Bug I Have Fixed (So Far)",
    "tags" : [
       "technical",
@@ -11,38 +11,19 @@
    ]
 }
 
-As I enter my last week at my current company, I thought it might be fun to do a writeup on the bug that was the hardest for me to track down and fix in the last two and a half years. 
+As I enter my last week at my current company, I thought it might be fun to do a quick writeup on the bug that was the hardest for me to track down and fix in the last two and a half years. 
 
-In the early spring of 2024, I encountered quite the mysterious bug that caused our production monolith server to completely stop responding to and logging requests, seemingly at random. This bug would lock up our server until an engineer manually restarted it. While the investigation process was an ordeal on its own, the main thing I want to focus on in this article is the bug itself, so I will be omitting the gory details of how I tracked down and squashed this bug.
+In the early spring of 2024, I encountered quite the mysterious bug that caused our production monolith server to completely stop responding to and logging requests, seemingly at random. This bug would lock up our server until an engineer manually restarted it. While the investigation process was an ordeal on its own, the main thing I want to focus on in this article is the bug itself.
 
-The problem ended up being a bug in the allocation and management of database connections from a shared database connection pool.
-
-## Background
-I'll start with some background
-
-A database connection pool is a group of database connections that are initialized in
-
-The package used was jackc's pgxpool for Go
-
-Each database pool accepts a config object that defines important things, such as callback functions run before and after acquiring a connection, the maximum lifetime of a given database connection, and the maximum time that a connection can be idle, to name a few. A particularly relevant field for my case was the maximum number of connections field (`MaxConns`). The definition of this from the `pgxpool` package is below.
-{{< highlight golang >}}
-	// MaxConns is the maximum size of the pool. The default is the greater of 4 or runtime.NumCPU().
-	MaxConns int32
-{{< / highlight >}}
-
-The production monolith has only four CPU cores, so the maximum number of CPU cores is 4.
-
-## The Bug
-I have reproduced the bug below in a an abbreviated version of the culprit code. For simplicity and clarity I have omitted error checking, as well as the setup function initializing the connection pool. You can assume that all error checking is done correctly and that the connection pool is initialized correctly.
+Before I explain the bug, I am going to lay it out so you can have a guess. I have recreated the bug in an abbreviated version of the cuplrit code below. I have omitted the SQL statements, error checking, and database connection pool initialization. All you need to know, besides the code below, is that the Postgres database connection pool is initialized via the `jackc/pgxpool/v4` package and is shared globally among all of the concurrent server threads. Queries are made via the `jackc/pgx` package.
 
 {{< highlight golang >}}
-var ConnPool *pgxpool.Pool
-
-func GetPersonsInGroup(groupID int)[]Person{
-
-   for rows.Next(){
-
-
+rows, _ := ConnPool.Query()
+for rows.Next(){
+   // Scan and process row
+   newRows, _ := ConnPool.Query()
+   for newRows.next() {
+      // Scan and process new row
    }
 }
 {{< / highlight >}}
@@ -50,13 +31,49 @@ func GetPersonsInGroup(groupID int)[]Person{
 Do you see the problem? Maybe? What if I rewrite it with mutexes?
 
 {{< highlight golang >}}
+mutex.Lock()
+for i := 0; i < 1000; i++ {
+   mutex.Lock()
+   for j := 0; j < 10; j++ {
+      // Do stuff
+   }
+   mutex.Unlock()
+}
+mutex.Unlock()
 {{< / highlight >}}
 
-Here's the fix.
+This is indeed a deadlock caused by a sneaky race condition.
+
+Upon creation, each database pool accepts a config object that defines important things, but the particularly relevant field for my case was the maximum number of connections field (`MaxConns`). The definition of this from the `pgxpool` package is below.
 {{< highlight golang >}}
+	// MaxConns is the maximum size of the pool. The default is the greater of 4 or runtime.NumCPU().
+	MaxConns int32
 {{< / highlight >}}
 
-Links to read:
-https://pkg.go.dev/github.com/jackc/pgx/v4/pgxpool#Config
-https://stackoverflow.com/questions/4041114/what-is-database-pooling
-https://www.cockroachlabs.com/blog/what-is-connection-pooling/
+The production monolith has only four CPU cores, so the maximum number of database connections is 4.
+
+A database connection is taken from the pool when `ConnPool.Query()` is called, but the connection is not released back into the pool until either one of two things (to my knowledge) occurs:
+1. `rows.Close()` is called on the open `rows` object.
+2. `rows.Next()` completes iterating over all available rows.
+
+You can see in the example that there are two `ConnPool.Query()` calls, with one nested under the other. The first `rows` object does not release its connection back into the pool until after the function acquires a second connection from the pool and fully processes it.
+
+In the overall context of this bug in our server; on quick, subsequent calls to the endpoint that invoked this database code, four separate threads would each take a database connection before any of them could grab a second connection. This would effectively lock up the database layer, because each of these threads is now waiting for a second database connection, while holding onto their own initial connection.
+
+This fix was a simple one.
+{{< highlight golang >}}
+rows, _ := ConnPool.Query()
+var data []any
+for rows.Next(){
+   // Scan and process rows into data
+}
+
+newRows, _ := ConnPool.Query()
+for newRows.next() {
+   // Scan and process new rows using data
+}
+{{< / highlight >}}
+
+Thanks for reading! I've also attached some additional links on database connection pools if you want to read a little more about why they are used.
+- https://stackoverflow.com/questions/4041114/what-is-database-pooling
+- https://www.cockroachlabs.com/blog/what-is-connection-pooling/
