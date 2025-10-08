@@ -21,6 +21,7 @@ A digital garden of links to interesting or frequently visited places.
 * [Soham Kanami](https://www.sohamkamani.com/archive/)
 * [Justine Tunney](https://justine.lol/)
 * [Ben Wang](https://benwang.dev/)
+* [Engineer's Codex](https://read.engineerscodex.com/)
 
 ### Companies
 
