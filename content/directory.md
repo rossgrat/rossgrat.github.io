@@ -20,7 +20,7 @@ A digital garden of links to interesting or frequently visited places.
 * [Russ Cox](https://research.swtch.com/)
 * [Soham Kanami](https://www.sohamkamani.com/archive/)
 * [Justine Tunney](https://justine.lol/)
-# [Ben Wang](https://benwang.dev/)
+* [Ben Wang](https://benwang.dev/)
 
 ### Companies
 
