@@ -10,6 +10,14 @@
    ]
 }
 
+## Edit - October 9th, 2025
+
+It's a bit embarassing to look back at this post (even though it was originally posted less than a year ago!) and realize that the "fixed" code isn't quite fixed after all After many months of learning from talented engineers in my new position, and finishing Kleppmann's Designing Data Intensive Applications (a.k.a the Bible), I realize that there is actually a read skew condition present in the "fixed" code. The correct fix for this bug is to use transactions and leverage Snapshot Isolation present in Postgres.
+
+Live and learn!
+
+## Original Post
+
 As I enter my last week at my current company, I thought it might be fun to do a quick writeup on the bug that was the hardest for me to track down and fix in the last two and a half years. 
 
 In the early spring of 2024, I encountered quite the mysterious bug that caused our production monolith server to completely stop responding to and logging requests, seemingly at random. This bug would lock up our server until an engineer manually restarted it. While the investigation process was an ordeal on its own, the main thing I want to focus on in this article is the bug itself.
@@ -74,5 +82,5 @@ for newRows.next() {
 {{< /highlight >}}
 
 Thanks for reading! I've also attached some additional links on database connection pools if you want to read a little more about why they are used.
-- https://stackoverflow.com/questions/4041114/what-is-database-pooling
-- https://www.cockroachlabs.com/blog/what-is-connection-pooling/
+- [StackOverflow](https://stackoverflow.com/questions/4041114/what-is-database-pooling)
+- [Cochroack Labs](https://www.cockroachlabs.com/blog/what-is-connection-pooling/)
