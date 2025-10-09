@@ -12,7 +12,7 @@
 
 ## Edit - October 9th, 2025
 
-It's a bit embarassing to look back at this post (even though it was originally posted less than a year ago!) and realize that the "fixed" code isn't quite fixed after all After many months of learning from talented engineers in my new position, and finishing Kleppmann's Designing Data Intensive Applications (a.k.a the Bible), I realize that there is actually a read skew condition present in the "fixed" code. The correct fix for this bug is to use transactions and leverage Snapshot Isolation present in Postgres.
+It's a bit embarassing to look back at this post (even though it was originally posted less than a year ago!) and realize that the "fixed" code isn't quite fixed. After many months of learning from talented engineers in my new position, and finishing Kleppmann's Designing Data Intensive Applications (a.k.a the Bible), I realize that there is actually a read skew condition present in the "fixed" code. The correct fix for this bug is to use transactions and leverage Snapshot Isolation present in Postgres.
 
 Live and learn!
 
