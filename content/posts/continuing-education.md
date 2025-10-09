@@ -4,7 +4,7 @@
    "title": "Continuing My Education",
    "tags" : [
       "non-technical",
-      "educatio"
+      "education"
    ]
 }
 

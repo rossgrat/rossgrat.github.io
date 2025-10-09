@@ -6,8 +6,7 @@
       "technical",
       "go",
       "database",
-      "backend",
-      "concurrency"
+      "backend"
    ]
 }
 
