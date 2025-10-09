@@ -3,7 +3,7 @@
    "draft": false,
    "title": "Whist Tournaments for Euchre",
    "tags" : [
-         "technical"
+         "technical",
          "algorithms",
          "frontend"
       ]
