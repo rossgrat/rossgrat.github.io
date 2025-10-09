@@ -14,7 +14,7 @@ As I enter my last week at my current company, I thought it might be fun to do a
 
 In the early spring of 2024, I encountered quite the mysterious bug that caused our production monolith server to completely stop responding to and logging requests, seemingly at random. This bug would lock up our server until an engineer manually restarted it. While the investigation process was an ordeal on its own, the main thing I want to focus on in this article is the bug itself.
 
-Before I explain the bug, I am going to lay it out so you can have a guess. I have recreated the bug in an abbreviated version of the cuplrit code below. I have omitted the SQL statements, error checking, and database connection pool initialization. All you need to know, besides the code below, is that the Postgres database connection pool is initialized via the `jackc/pgxpool/v4` package and is shared globally among all of the concurrent server threads. Queries are made via the `jackc/pgx` package.
+Before I explain the bug, I am going to lay it out so you can have a guess. I have recreated the bug in an abbreviated version of the culprit code below. I have omitted the SQL statements, error checking, and database connection pool initialization. All you need to know, besides the code below, is that the Postgres database connection pool is initialized via the `jackc/pgxpool/v4` package and is shared globally among all of the concurrent server threads. Queries are made via the `jackc/pgx` package.
 
 {{< highlight golang >}}
 rows, _ := ConnPool.Query()
@@ -25,7 +25,7 @@ for rows.Next(){
       // Scan and process new row
    }
 }
-{{< / highlight >}}
+{{< /highlight >}}
 
 Do you see the problem? Maybe? What if I rewrite it with mutexes?
 
@@ -39,7 +39,7 @@ for i := 0; i < 1000; i++ {
    mutex.Unlock()
 }
 mutex.Unlock()
-{{< / highlight >}}
+{{< /highlight >}}
 
 This is indeed a deadlock caused by a sneaky race condition.
 
@@ -47,7 +47,7 @@ Upon creation, each database pool accepts a config object that defines important
 {{< highlight golang >}}
 	// MaxConns is the maximum size of the pool. The default is the greater of 4 or runtime.NumCPU().
 	MaxConns int32
-{{< / highlight >}}
+{{< /highlight >}}
 
 The production monolith has only four CPU cores, so the maximum number of database connections is 4.
 
@@ -71,7 +71,7 @@ newRows, _ := ConnPool.Query()
 for newRows.next() {
    // Scan and process new rows using data
 }
-{{< / highlight >}}
+{{< /highlight >}}
 
 Thanks for reading! I've also attached some additional links on database connection pools if you want to read a little more about why they are used.
 - https://stackoverflow.com/questions/4041114/what-is-database-pooling

@@ -9,12 +9,12 @@
       ]
 }
 
-My dad has a friend that holds an annual Euchre tournament each year on St. Patties day. It's a pretty big deal, anywhere from 20-30 people will show up to see who takes home a non-trivial cash prize. The format is unique and very similar to a round-robin style tournament, but with a twist. Each round the teams are randomly chosen via each person pulling a piece of paper out of a hat. The system is simple, but there are some problems such as players playing each other multiple times or having the same partner multiple times, which is why I was approached to write a program to improve the process.
+My dad has a friend that holds an annual Euchre tournament each year on St. Paddy's Day. It's a pretty big deal, anywhere from 20-30 people will show up to see who takes home a non-trivial cash prize. The format is unique and very similar to a round-robin style tournament, but with a twist. Each round the teams are randomly chosen via each person pulling a piece of paper out of a hat. The system is simple, but there are some problems such as players playing each other multiple times or having the same partner multiple times, which is why I was approached to write a program to improve the process.
 
 I was only given one constraint, and that was: make it such that each person has every other person as a partner exactly once. I am happy to say that I was able to produce a product to solve this problem. Below I am going to detail my journey of building this app as well as what I learned from my mistakes and successes.
 
 ## False Starts
-In the past I have extensively researched a project before starting. Unfortunately, this time around, an abundance over overconfidence led me to start an implementation for this project without doing so not once, but twice, before finally coming to my senses. This section encapsulates both of these failures for posterity as a reminder to my future self to measure twice and cut once.
+In the past I have extensively researched a project before starting. Unfortunately, this time around, an abundance of overconfidence led me to start an implementation for this project without doing so not once, but twice, before finally coming to my senses. This section encapsulates both of these failures for posterity as a reminder to my future self to measure twice and cut once.
 
 ### No. 1 - Backtracking
 Upon starting this project I had recently done some backtracking exercises on Leetcode, and thought I had a solution right away. I would generate all of the possible team combinations via backtracking, then pair those team combinations together to create the tables for each round. 
@@ -83,7 +83,7 @@ I tried a few tweaks to fix this such as adjusting where the iterative loops sta
 
 ## Stepping back and doing some research
 
-A deep dive into the interwebs led by to a mathematics stack exchange post where someone posited a question about this very same tournament format, albeit for a different game. One of the answers led by to my two new heroes, Richard A. Venezia and Durango Bill.
+A deep dive into the interwebs led me to a mathematics stack exchange post where someone posited a question about this very same tournament format, albeit for a different game. One of the answers led by to my two new heroes, Richard A. Venezia and Durango Bill.
 
 It turns out that this type of tournament design exists! And there is literature on it. In the blog of Richard A. Venezia, I found a short discussion where someone requested this style of a tournament for beach volleyball. Richard tried to come up with a solution on his own, which worked out semi-well, but also reached out to a friend, and this friend introduced Richard, the original question-asker, and now myself, to the tournament style that is called Whist.
 
@@ -104,7 +104,7 @@ With the hard part of figuring out the underlying tournament generation algorith
 
 I decided to use Angular because I am a huge fan of Golang and wanted to try out Google's web framework. 
 
-The Angular app has no routes and only two components besides the main `*app* component. 
+The Angular app has no routes and only two components besides the main *app* component. 
 
 The first component is called the *players* component and its function is to allow the user to add the names of all participating players. This component displays a simple input box and a list of players, with the most recent player appearing at the top of the list. Players can be dismissed using the "x" next to their names. The color of the number indicating how many players have been added changes color depending on the validity of the value. The number of players must be divisible by 4. Each player is assigned a unique ID, with the first player added receiving the ID of 1, the second player added receiving an ID of 2, and so on. At the bottom there is a large "Start Tournament" button.
 
