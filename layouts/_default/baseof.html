@@ -14,7 +14,7 @@
     {{- if hugo.IsServer }}
         <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
     {{ else }}
-        {{ $styles := $styles | minify | fingerprint | css.PostCSS }}
+        {{ $styles := $styles | minify | fingerprint }}
         <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
     {{ end }}
     <title>{{ .Title }} - Ross Grattafiori</title>
