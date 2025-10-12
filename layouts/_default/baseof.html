@@ -17,7 +17,7 @@
         {{ $styles := $styles | minify | fingerprint }}
         <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
     {{ end }}
-    <title>{{ .Title }} - Ross Grattafiori</title>
+    <title>{{ .Title }}</title>
 
     <!-- RSS Feed Auto-Discovery -->
     {{ range .AlternativeOutputFormats -}}
