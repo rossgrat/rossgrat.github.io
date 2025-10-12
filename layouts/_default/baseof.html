@@ -18,6 +18,11 @@
         <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
     {{ end }}
     <title>{{ .Title }} - Ross Grattafiori</title>
+
+    <!-- RSS Feed Auto-Discovery -->
+    {{ range .AlternativeOutputFormats -}}
+        {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{ end -}}
 </head>
 
 <body class="text-neutral-50 font-sans">
