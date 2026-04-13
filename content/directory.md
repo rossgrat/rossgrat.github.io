@@ -24,13 +24,11 @@ A digital garden of links to interesting or frequently visited places.
 * [Engineer's Codex](https://read.engineerscodex.com/)
 * [Matt Godbolt](https://xania.org/)
 
-### Companies
+### Talks
 
-* [Garmin](https://www.garmin.com/en-US/blog/)
-* [Proton](https://proton.me/blog/)
-* [Spotify](https://engineering.atspotify.com/)
-* [Strava](https://medium.com/strava-engineering)
-* [Stripe](https://stripe.com/blog/engineering)
+* [Hammock-Driven Development - Rick Hickey](https://www.youtube.com/watch?v=f84n5oFoZBc)
+* [Complexity of Simplicity - Bryan Cantrill](https://www.youtube.com/watch?v=Cum5uN2634o)
+* [Debugging under Fire - Bryan Cantrill](https://www.youtube.com/watch?v=30jNsCVLpAE)
 
 ## Resources
 
