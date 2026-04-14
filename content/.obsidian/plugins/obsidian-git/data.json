@@ -1,0 +1,6 @@
+{
+  "commitMessage": "post: {{files}}",
+  "autoPullOnBoot": true,
+  "pullBeforePush": true,
+  "showStatusBar": true
+}

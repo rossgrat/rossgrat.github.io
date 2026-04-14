@@ -4,3 +4,12 @@ node_modules
 public
 
 .DS_Store
+
+# Obsidian: per-machine state
+content/.obsidian/workspace*
+content/.obsidian/cache
+
+# Obsidian: plugin binaries (installed via in-app store)
+content/.obsidian/plugins/*/main.js
+content/.obsidian/plugins/*/manifest.json
+content/.obsidian/plugins/*/styles.css

@@ -1,14 +1,13 @@
-{
-   "date": "2025-01-20T16:29:40-05:00",
-   "draft": false,
-   "title": "The Nastiest Bug I Have Fixed (So Far)",
-   "tags" : [
-      "technical",
-      "go",
-      "database",
-      "backend"
-   ]
-}
+---
+date: 2025-01-20T16:29:40-05:00
+draft: false
+title: "The Nastiest Bug I Have Fixed (So Far)"
+tags:
+  - technical
+  - go
+  - database
+  - backend
+---
 
 ## Edit - October 9th, 2025
 

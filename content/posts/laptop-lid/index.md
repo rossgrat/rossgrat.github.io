@@ -1,12 +1,11 @@
-{
-   "date": "2025-10-09T14:10:20-05:00",
-   "draft": false,
-   "title": "But what if I want to close the lid?",
-   "tags" : [
-      "homelab",
-      "technical"
-   ]
-}
+---
+date: 2025-10-09T14:10:20-05:00
+draft: false
+title: "But what if I want to close the lid?"
+tags:
+  - homelab
+  - technical
+---
 
 ![Laptop lid](laptop-lid.webp)
 

@@ -1,12 +1,11 @@
-{
-   "date": "2024-02-11T12:03:10-05:00",
-   "draft": false,
-   "title": "Hello World",
-   "tags" : [
-      "technical",
-      "frontend"
-   ]
-}
+---
+date: 2024-02-11T12:03:10-05:00
+draft: false
+title: "Hello World"
+tags:
+  - technical
+  - frontend
+---
 
 This is the first ever post for the third iteration of my personal website that now features blogging thanks to the excellent [Hugo](https://gohugo.io/) static site generator. In this post I want to explain my thoughts about what should go on the site, touch on some of the technologies used to build the site, and briefly discuss my thoughts on the look of the site.
 
