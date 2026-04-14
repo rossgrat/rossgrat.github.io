@@ -12,8 +12,6 @@ A digital garden of links to interesting or frequently visited places.
 
 ## Blogs
 
-### People
-
 * [Eli Bendersky](https://eli.thegreenplace.net/)
 * [Mark McGranaghan](https://markmcgranaghan.com/)
 * [Michael Lynch](https://mtlynch.io)
@@ -24,7 +22,7 @@ A digital garden of links to interesting or frequently visited places.
 * [Engineer's Codex](https://read.engineerscodex.com/)
 * [Matt Godbolt](https://xania.org/)
 
-### Talks
+## Talks
 
 * [Hammock-Driven Development - Rick Hickey](https://www.youtube.com/watch?v=f84n5oFoZBc)
 * [Complexity of Simplicity - Bryan Cantrill](https://www.youtube.com/watch?v=Cum5uN2634o)
