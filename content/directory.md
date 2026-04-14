@@ -1,8 +1,8 @@
-{
-   "layout": "directory",
-   "title": "Directory",
-   "type": "page"
-}
+---
+layout: directory
+title: "Directory"
+type: page
+---
 
 A digital garden of links to interesting or frequently visited places.
 

@@ -1,13 +1,12 @@
-{
-   "date": "2024-07-15T17:41:56-04:00",
-   "draft": false,
-   "title": "Whist Tournaments for Euchre",
-   "tags" : [
-         "technical",
-         "algorithms",
-         "frontend"
-      ]
-}
+---
+date: 2024-07-15T17:41:56-04:00
+draft: false
+title: "Whist Tournaments for Euchre"
+tags:
+  - technical
+  - algorithms
+  - frontend
+---
 
 My dad has a friend that holds an annual Euchre tournament each year on St. Paddy's Day. It's a pretty big deal, anywhere from 20-30 people will show up to see who takes home a non-trivial cash prize. The format is unique and very similar to a round-robin style tournament, but with a twist. Each round the teams are randomly chosen via each person pulling a piece of paper out of a hat. The system is simple, but there are some problems such as players playing each other multiple times or having the same partner multiple times, which is why I was approached to write a program to improve the process.
 
