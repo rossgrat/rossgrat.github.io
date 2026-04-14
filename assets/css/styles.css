@@ -180,13 +180,17 @@ hr {
   margin: 0;
 }
 
-.prompt-user  { color: var(--yellow); }
+.prompt-user  { color: var(--green); }
+.prompt-at    { color: var(--gray); }
+.prompt-host  { color: var(--blue); }
 .prompt-sep   { color: var(--gray); }
-.prompt-path  { color: var(--red); }
+.prompt-path  { color: var(--blue); }
 .prompt-sign  { color: var(--gray); margin-right: 0.1rem; }
 
 @media (max-width: 639px) {
   .prompt-user,
+  .prompt-at,
+  .prompt-host,
   .prompt-sep {
     display: none;
   }
