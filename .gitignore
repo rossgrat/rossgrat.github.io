@@ -5,6 +5,10 @@ public
 
 .DS_Store
 
+# Playwright / screenshot artifacts
+.playwright-mcp/
+/*.png
+
 # Obsidian: per-machine state
 content/.obsidian/workspace*
 content/.obsidian/cache
