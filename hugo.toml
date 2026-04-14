@@ -5,6 +5,6 @@ ignoreFiles = ['/_templates/']
 
 [markup.highlight]
   style = "gruvbox"
-  noClasses = true
+  noClasses = false
   lineNos = false
   tabWidth = 2

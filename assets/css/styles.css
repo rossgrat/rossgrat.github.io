@@ -1,17 +1,18 @@
 :root {
-  --bg:     #1d2021;
-  --bg0:    #282828;
+  --bg:     #282828;
+  --bg0:    #32302f;
   --bg1:    #3c3836;
-  --bg3:    #665c54;
-  --fg:     #ebdbb2;
+  --bg3:    #5a524c;
+  --fg:     #ddc7a1;
   --gray:   #928374;
-  --red:    #fb4934;
-  --green:  #b8bb26;
-  --blue:   #83a598;
-  --aqua:   #8ec07c;
-  --yellow: #fabd2f;
-  --orange: #fe8019;
+  --red:    #ea6962;
+  --green:  #a9b665;
+  --blue:   #7daea3;
+  --aqua:   #89b482;
+  --yellow: #d8a657;
+  --orange: #e78a4e;
   --purple: #d3869b;
+  --code-bg: #1d2021;
 }
 
 *,
@@ -62,7 +63,7 @@ p {
 }
 
 a {
-  color: var(--blue);
+  color: var(--yellow);
   text-decoration: underline;
   text-underline-offset: 4px;
 }
@@ -97,7 +98,7 @@ li {
 
 code {
   font-family: inherit;
-  background: var(--bg0);
+  background: var(--code-bg);
   color: var(--orange);
   padding: 0.1em 0.3em;
   border-radius: 3px;
@@ -110,7 +111,10 @@ pre {
   margin: 0.75rem 0;
   border-radius: 4px;
   overflow: auto;
-  background: var(--bg0);
+}
+
+.chroma {
+  background-color: var(--code-bg);
 }
 
 pre code {
@@ -176,23 +180,10 @@ hr {
   margin: 0;
 }
 
-.prompt-user  { color: var(--green); }
+.prompt-user  { color: var(--yellow); }
 .prompt-sep   { color: var(--gray); }
-.prompt-path  { color: var(--blue); }
+.prompt-path  { color: var(--red); }
 .prompt-sign  { color: var(--gray); margin-right: 0.1rem; }
-.prompt-cmd   { color: var(--fg); }
-
-.prompt-cursor {
-  display: inline-block;
-  color: var(--fg);
-  margin-left: 0.15rem;
-  animation: cursor-blink 1s steps(1) infinite;
-}
-
-@keyframes cursor-blink {
-  0%, 50%   { opacity: 1; }
-  51%, 100% { opacity: 0; }
-}
 
 @media (max-width: 639px) {
   .prompt-user,
@@ -290,7 +281,7 @@ hr {
 }
 
 .post-date {
-  color: var(--green);
+  color: var(--gray);
   margin-right: 0.5rem;
 }
 
@@ -323,7 +314,7 @@ hr {
 
 .post-meta {
   font-size: 0.875rem;
-  color: var(--green);
+  color: var(--gray);
 }
 
 .post-header {

@@ -6,11 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    {{ $chroma := resources.Get "css/chroma.css" }}
     {{ $styles := resources.Get "css/styles.css" }}
     {{- if hugo.IsServer }}
+        <link rel="stylesheet" href="{{ $chroma.RelPermalink }}">
         <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
     {{ else }}
+        {{ $chroma := $chroma | minify | fingerprint }}
         {{ $styles := $styles | minify | fingerprint }}
+        <link rel="stylesheet" href="{{ $chroma.RelPermalink }}">
         <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
     {{ end }}
     <title>{{ .Title }}</title>
