@@ -172,8 +172,33 @@ hr {
 }
 
 .site-title {
-  font-weight: 800;
+  font-weight: 700;
   margin: 0;
+}
+
+.prompt-user  { color: var(--green); }
+.prompt-sep   { color: var(--gray); }
+.prompt-path  { color: var(--blue); }
+.prompt-sign  { color: var(--gray); margin-right: 0.1rem; }
+.prompt-cmd   { color: var(--fg); }
+
+.prompt-cursor {
+  display: inline-block;
+  color: var(--fg);
+  margin-left: 0.15rem;
+  animation: cursor-blink 1s steps(1) infinite;
+}
+
+@keyframes cursor-blink {
+  0%, 50%   { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+@media (max-width: 639px) {
+  .prompt-user,
+  .prompt-sep {
+    display: none;
+  }
 }
 
 .header-nav {
