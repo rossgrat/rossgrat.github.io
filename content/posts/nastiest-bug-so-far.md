@@ -82,4 +82,4 @@ for newRows.next() {
 
 Thanks for reading! I've also attached some additional links on database connection pools if you want to read a little more about why they are used.
 - [StackOverflow](https://stackoverflow.com/questions/4041114/what-is-database-pooling)
-- [Cochroack Labs](https://www.cockroachlabs.com/blog/what-is-connection-pooling/)
+- [Cockroach Labs](https://www.cockroachlabs.com/blog/what-is-connection-pooling/)

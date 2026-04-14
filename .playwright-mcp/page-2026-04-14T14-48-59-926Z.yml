@@ -1,0 +1,63 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "ross.grattafiori.dev" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - paragraph [ref=e6]: ross.grattafiori.dev
+      - img [ref=e8] [cursor=pointer]
+    - generic:
+      - separator [ref=e10]
+      - link "Directory Directory" [ref=e11] [cursor=pointer]:
+        - /url: /directory
+        - img "Directory" [ref=e12]
+        - generic [ref=e14]: Directory
+      - link "Blog Posts" [ref=e15] [cursor=pointer]:
+        - /url: /posts
+        - img "Blog" [ref=e16]
+        - generic [ref=e18]: Posts
+  - main [ref=e19]:
+    - generic [ref=e20]:
+      - generic [ref=e21]:
+        - paragraph [ref=e22]: 👋 Hi! My name is Ross, thanks for checking out my space. I am a Software Engineer, currently focused on building distributed and highly scalable systems.
+        - paragraph [ref=e23]: This is where I write about tech-related topics, in addition to being home to my collection of interesting online resources.
+        - paragraph [ref=e24]: The views expressed in this blog are my own, and do not represent those of my employer.
+      - generic [ref=e25]:
+        - heading "Recent Posts" [level=2] [ref=e26]
+        - paragraph [ref=e27]:
+          - text: 2025-10-09
+          - link "But what if I want to close the lid?" [ref=e28] [cursor=pointer]:
+            - /url: /posts/laptop-lid/
+        - paragraph [ref=e29]:
+          - text: 2025-01-20
+          - link "The Nastiest Bug I Have Fixed (So Far)" [ref=e30] [cursor=pointer]:
+            - /url: /posts/nastiest-bug-so-far/
+        - paragraph [ref=e31]:
+          - text: 2024-07-15
+          - link "Whist Tournaments for Euchre" [ref=e32] [cursor=pointer]:
+            - /url: /posts/whist-tournament-maker/
+        - paragraph [ref=e33]:
+          - text: 2024-02-11
+          - link "Hello World" [ref=e34] [cursor=pointer]:
+            - /url: /posts/hello-world/
+  - contentinfo [ref=e35]:
+    - generic [ref=e36]:
+      - separator [ref=e37]
+      - generic [ref=e38]:
+        - paragraph [ref=e39]: © 2024-2026 Ross Grattafiori
+        - generic [ref=e40]:
+          - link "Linkedin" [ref=e41] [cursor=pointer]:
+            - /url: https://linkedin.com/in/ross-grattafiori
+            - img "Linkedin" [ref=e42]
+          - link "Github" [ref=e44] [cursor=pointer]:
+            - /url: https://github.com/rossgrat
+            - img "Github" [ref=e45]
+          - link "Stack Overflow" [ref=e47] [cursor=pointer]:
+            - /url: https://stackoverflow.com/users/23582115/lc2k
+            - img "Stack Overflow" [ref=e48]
+          - link "RSS Feed" [ref=e50] [cursor=pointer]:
+            - /url: /index.xml
+            - img "RSS Feed" [ref=e51]
+        - paragraph [ref=e53]:
+          - text: Made with
+          - link "Hugo" [ref=e54] [cursor=pointer]:
+            - /url: https://gohugo.io/

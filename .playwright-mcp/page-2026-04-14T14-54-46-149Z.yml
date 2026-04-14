@@ -1,0 +1,47 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "ross.grattafiori.dev" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - paragraph [ref=e6]: ross.grattafiori.dev
+      - generic [ref=e7]:
+        - link "Directory" [ref=e8] [cursor=pointer]:
+          - /url: /directory
+          - img "Directory" [ref=e9]
+        - link "Blog" [ref=e11] [cursor=pointer]:
+          - /url: /posts
+          - img "Blog" [ref=e12]
+  - main [ref=e14]:
+    - generic [ref=e15]:
+      - generic [ref=e16]: ____ ___ _ _ | / | / _ \| || | |/ /_ | | | | || |_ | '_ \| | | |__ _| | (_) | |_| | | | \___/ \___/ |_|
+      - heading "Page Not Found" [level=1] [ref=e17]
+      - paragraph [ref=e18]:
+        - text: The page you're looking for wandered off. Try the
+        - link "home page" [ref=e19] [cursor=pointer]:
+          - /url: /
+        - text: or the
+        - link "posts list" [ref=e20] [cursor=pointer]:
+          - /url: /posts/
+        - text: .
+  - contentinfo [ref=e21]:
+    - generic [ref=e22]:
+      - separator [ref=e23]
+      - generic [ref=e24]:
+        - paragraph [ref=e25]: © 2024-2026 Ross Grattafiori
+        - generic [ref=e26]:
+          - link "Linkedin" [ref=e27] [cursor=pointer]:
+            - /url: https://linkedin.com/in/ross-grattafiori
+            - img "Linkedin" [ref=e28]
+          - link "Github" [ref=e30] [cursor=pointer]:
+            - /url: https://github.com/rossgrat
+            - img "Github" [ref=e31]
+          - link "Stack Overflow" [ref=e33] [cursor=pointer]:
+            - /url: https://stackoverflow.com/users/23582115/lc2k
+            - img "Stack Overflow" [ref=e34]
+          - link "RSS Feed" [ref=e36] [cursor=pointer]:
+            - /url: /index.xml
+            - img "RSS Feed" [ref=e37]
+        - paragraph [ref=e39]:
+          - text: Made with
+          - link "Hugo" [ref=e40] [cursor=pointer]:
+            - /url: https://gohugo.io/

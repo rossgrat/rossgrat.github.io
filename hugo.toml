@@ -2,3 +2,9 @@ baseURL = 'https://ross.grattafiori.dev/'
 languageCode = 'en-us'
 title = "Ross Grattafiori's Blog"
 ignoreFiles = ['/_templates/']
+
+[markup.highlight]
+  style = "gruvbox"
+  noClasses = true
+  lineNos = false
+  tabWidth = 2

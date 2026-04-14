@@ -1,11 +1,11 @@
 {{ define "main"}}
-<div class="flex flex-col">
-    <div class="flex flex-col gap-2">
-        <h1 class="font-extrabold text-4xl">{{ .Title }}</h1>
+<div>
+    <div>
+        <h1>{{ .Title }}</h1>
     </div>
-    <div class="mt-5">
+    <div class="post-list">
         {{ range .Paginator.Pages }}
-        <p class="py-0">{{ .Date.Format "2006-01-02  " }} <a href="{{ .RelPermalink }}">{{.Title }}</a></p>
+        <p class="post-list-item"><span class="post-date">{{ .Date.Format "2006-01-02" }}</span> <a href="{{ .RelPermalink }}">{{.Title }}</a></p>
         {{ end }}
     </div>
 </div>

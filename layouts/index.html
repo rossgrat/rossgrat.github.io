@@ -1,20 +1,20 @@
 {{ define "main" }}
-<div class="flex flex-col">
+<div>
   <div>
-    <p>&#128075 Hi! My name is Ross, thanks for checking out my space. I am a Software Engineer, currently focused on 
+    <p>&#128075 Hi! My name is Ross, thanks for checking out my space. I am a Software Engineer, currently focused on
       building distributed and highly scalable systems.
     </p>
     <p>
       This is where I write about tech-related topics, in addition to being home to my collection of interesting online resources.
     </p>
-      <p><i>The views expressed in this blog are my own, and do not represent those of my employer.</i></p>
+    <p><i>The views expressed in this blog are my own, and do not represent those of my employer.</i></p>
   </div>
 
   <div>
     <h2>Recent Posts</h2>
     {{ $pages := where .Site.RegularPages "Section" "posts" }}
     {{ range (.Paginate $pages 5).Pages }}
-    <p class="py-0">{{ .Date.Format "2006-01-02  " }} <a href="{{ .RelPermalink }}">{{.Title }}</a></p>
+    <p class="post-list-item"><span class="post-date">{{ .Date.Format "2006-01-02" }}</span> <a href="{{ .RelPermalink }}">{{.Title }}</a></p>
     {{ end }}
   </div>
 </div>

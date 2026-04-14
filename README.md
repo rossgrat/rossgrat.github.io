@@ -2,8 +2,7 @@
 Ross' Portfolio website created using Hugo and custom styling. Supports blog posts.
 
 ## Local Development
-* Install node modules with  `npm install`, required for PostCSS and Tailwind
-* `hugo server`
+* `hugo server` (or `make local`)
 
 ## Writing posts with Obsidian
 
