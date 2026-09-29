@@ -1,6 +1,12 @@
 {{ define "main" }}
-<p class="eyebrow">Hello, world</p>
-<h1>{{ .Title }}</h1>
+{{ $headshot := (resources.Get "images/headshot.jpeg").Resize "320x webp q85" }}
+<div class="about-heading">
+    <div>
+        <p class="eyebrow">Hello, world</p>
+        <h1>{{ .Title }}</h1>
+    </div>
+    <img class="about-headshot" src="{{ $headshot.RelPermalink }}" alt="Ross Grattafiori" width="128" height="128" decoding="async">
+</div>
 {{ .Content }}
 <p class="disclaimer">The views expressed in this blog are my own, and do not represent those of my employer.</p>
 {{ end }}
