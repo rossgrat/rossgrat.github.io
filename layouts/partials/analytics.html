@@ -1,0 +1,21 @@
+{{ if and hugo.IsProduction (not hugo.IsServer) }}
+{{ $tracker := resources.Get "js/vendor/goatcounter-2.7.0.js" | minify | fingerprint }}
+<script>
+    window.addEventListener('load', function () {
+        function loadTracker() {
+            var script = document.createElement('script');
+            script.src = '{{ $tracker.RelPermalink }}';
+            script.async = true;
+            script.fetchPriority = 'low';
+            script.dataset.goatcounter = 'https://stats.grattafiori.dev/count';
+            script.dataset.goatcounterSettings = '{"no_events":true}';
+            document.head.appendChild(script);
+        }
+        if ('requestIdleCallback' in window) {
+            window.requestIdleCallback(loadTracker, { timeout: 2000 });
+        } else {
+            window.setTimeout(loadTracker, 0);
+        }
+    }, { once: true });
+</script>
+{{ end }}

@@ -4,6 +4,21 @@ Ross' Portfolio website created using Hugo and custom styling. Supports blog pos
 ## Local Development
 * `hugo server` (or `make local`)
 
+## Analytics
+
+Production builds use self-hosted GoatCounter at `https://stats.grattafiori.dev`.
+Local Hugo previews omit tracking.
+The pinned 2.7.0 script lives in `assets/js/vendor/` with its ISC license.
+The analytics partial loads it after page load, during browser idle time when available.
+The blog does not wait for the analytics server to respond.
+
+Visit `https://ross.grattafiori.dev/#toggle-goatcounter` to exclude your browser from counts.
+Wait for the confirmation. Visit that URL again to enable tracking.
+
+The service, database, and deployment instructions live in the
+[potatoserver repository](https://github.com/rossgrat/potatoserver/blob/main/docs/goatcounter.md).
+See the [GoatCounter integration documentation](https://www.goatcounter.com/help/js) before upgrading the script.
+
 ## Writing posts with Obsidian
 
 One-time setup on a new macOS machine:
