@@ -1,34 +1,22 @@
-{{ define "main"}}
-<div>
-    <div class="post-header">
-        <div>
-            <h1>{{ .Title }}</h1>
-        </div>
+{{ define "main" }}
+<article>
+    <header class="post-header">
+        <p class="eyebrow">Blog</p>
+        <h1>{{ .Title }}</h1>
         <div class="post-meta-row">
-            <p class="post-meta">{{ .Date.Format "Jan 02, 2006"}}</p>
-            <p class="post-meta">
-            {{ range .Params.tags }}
-                <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
-            {{ end }}
-            </p>
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+            <div class="post-tags" aria-label="Article topics">
+                {{ range .GetTerms "tags" }}
+                <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+                {{ end }}
+            </div>
         </div>
-    </div>
-    <div>
-        {{ .Content }}
-    </div>
-    {{ if or .PrevInSection .NextInSection }}
-    <nav class="post-nav">
-        <div class="post-nav-prev">
-            {{ with .PrevInSection }}
-            <a href="{{ .RelPermalink }}"><span class="post-nav-label">&larr; prev</span> <span class="post-nav-title">{{ .Title }}</span></a>
-            {{ end }}
-        </div>
-        <div class="post-nav-next">
-            {{ with .NextInSection }}
-            <a href="{{ .RelPermalink }}"><span class="post-nav-label">next &rarr;</span> <span class="post-nav-title">{{ .Title }}</span></a>
-            {{ end }}
-        </div>
+    </header>
+    <div class="post-content">{{ .Content }}</div>
+    <nav class="post-nav" aria-label="More writing">
+        <a href="/archive/">View archive</a>
+        {{ with .PrevInSection }}<a href="{{ .RelPermalink }}">&larr; {{ .Title }}</a>{{ end }}
+        {{ with .NextInSection }}<a href="{{ .RelPermalink }}">{{ .Title }} &rarr;</a>{{ end }}
     </nav>
-    {{ end }}
-</div>
+</article>
 {{ end }}

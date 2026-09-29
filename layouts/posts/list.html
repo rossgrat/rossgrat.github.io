@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Archive</title>
+    {{ with .Site.GetPage "/archive" }}
+    <link rel="canonical" href="{{ .Permalink }}">
+    <meta http-equiv="refresh" content="0; url={{ .Permalink }}">
+    {{ end }}
+</head>
+<body><p><a href="{{ relURL "archive/" }}">Continue to the archive</a>.</p></body>
+</html>

@@ -1,0 +1,9 @@
+{{ define "main" }}
+<p class="eyebrow">Browse by subject</p>
+<h1>{{ if eq .Section "tags" }}Topics{{ else }}{{ .Title }}{{ end }}</h1>
+<ul class="topic-list">
+    {{ range .Data.Terms.Alphabetical }}
+    <li><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a><span>{{ .Count }}</span></li>
+    {{ end }}
+</ul>
+{{ end }}

@@ -6,6 +6,9 @@
 {{- else -}}
 {{- $pages = $pctx.Pages -}}
 {{- end -}}
+{{- $pages = where $pages "Layout" "ne" "archive" -}}
+{{- $pages = where $pages "Layout" "ne" "finds" -}}
+{{- $pages = where $pages "Layout" "ne" "about" -}}
 {{- $limit := .Site.Config.Services.RSS.Limit -}}
 {{- if ge $limit 1 -}}
 {{- $pages = $pages | first $limit -}}
@@ -24,7 +27,6 @@
     {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
     {{- end -}}
     {{ range $pages }}
-    {{ if ne .Title "Directory" }}
     <item>
       <title>{{ .Title }}</title>
       <link>{{ .Permalink }}</link>
@@ -32,7 +34,6 @@
       <guid>{{ .Permalink }}</guid>
       <description>{{ replaceRE "(<img[^>]+src=\")([^/:\"]+)(\")" (printf "${1}%s${2}${3}" .Permalink) .Content | replaceRE "(<a[^>]+href=\")([^/:\"#]+)(\")" (printf "${1}%s${2}${3}" .Permalink) | html }}</description>
     </item>
-    {{ end }}
     {{ end }}
   </channel>
 </rss>

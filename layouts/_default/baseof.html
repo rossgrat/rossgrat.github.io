@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode | default " en-us" }}">
+<html lang="{{ .Site.LanguageCode | default "en-us" }}">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <meta name="theme-color" content="#19191b">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     {{ $chroma := resources.Get "css/chroma.css" }}
     {{ $styles := resources.Get "css/styles.css" }}
     {{- if hugo.IsServer }}
+        {{ $chroma = $chroma | fingerprint }}
+        {{ $styles = $styles | fingerprint }}
         <link rel="stylesheet" href="{{ $chroma.RelPermalink }}">
         <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
     {{ else }}
@@ -26,9 +30,10 @@
 </head>
 
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <div class="page">
         <header class="site-header">{{ partial "header" . }}</header>
-        <main class="site-main">{{ block "main" . }}{{ end }}</main>
+        <main id="main" class="site-main">{{ block "main" . }}{{ end }}</main>
         <footer class="site-footer">{{ partial "footer" . }}</footer>
     </div>
 </body>

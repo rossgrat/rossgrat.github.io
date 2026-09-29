@@ -1,0 +1,7 @@
+{{ if gt .TotalPages 1 }}
+<nav class="pagination" aria-label="Pagination">
+    {{ with .Prev }}<a href="{{ .URL }}">&larr; Newer posts</a>{{ end }}
+    <span>Page {{ .PageNumber }} of {{ .TotalPages }}</span>
+    {{ with .Next }}<a href="{{ .URL }}">Older posts &rarr;</a>{{ end }}
+</nav>
+{{ end }}

@@ -4,7 +4,7 @@ title = "Ross Grattafiori's Blog"
 ignoreFiles = ['/_templates/']
 
 [markup.highlight]
-  style = "gruvbox"
+  style = "github-dark"
   noClasses = false
   lineNos = false
   tabWidth = 2

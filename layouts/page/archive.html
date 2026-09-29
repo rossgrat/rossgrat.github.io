@@ -1,0 +1,22 @@
+{{ define "main" }}
+<p class="eyebrow">Everything so far</p>
+<h1>{{ .Title }}</h1>
+<nav class="archive-views" aria-label="Browse archive">
+    <a href="/archive/"{{ if ne .Params.view "topics" }} aria-current="page"{{ end }}>By year</a>
+    <a href="/archive/topics/"{{ if eq .Params.view "topics" }} aria-current="page"{{ end }}>By topic</a>
+</nav>
+{{ if eq .Params.view "topics" }}
+<ul class="topic-list">
+    {{ range .Site.Taxonomies.tags.Alphabetical }}
+    <li><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a><span>{{ .Count }}</span></li>
+    {{ end }}
+</ul>
+{{ else }}
+{{ range (where .Site.RegularPages "Section" "posts").GroupByDate "2006" }}
+<section aria-labelledby="year-{{ .Key }}">
+    <h2 id="year-{{ .Key }}">{{ .Key }}</h2>
+    {{ partial "post-list" .Pages }}
+</section>
+{{ end }}
+{{ end }}
+{{ end }}

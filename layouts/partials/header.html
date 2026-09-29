@@ -1,50 +1,9 @@
-<div class="header-row">
-    <a href="/" class="no-underline site-title-link">
-        <p class="site-title"><span class="prompt-user">ross</span><span class="prompt-at">@</span><span class="prompt-host">grattafiori</span><span class="prompt-sep">:</span><span class="prompt-path">~</span><span class="prompt-sign">$</span></p>
-    </a>
-    <div class="header-nav">
-        <a href="/directory">
-            <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <title>Directory</title>
-                <path d="M10,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V8C22,6.89 21.1,6 20,6H12L10,4Z" />
-            </svg>
-        </a>
-        <a href="/posts">
-            <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <title>Blog</title>
-                <path d="M3 3V21H21V3H3M18 18H6V17H18V18M18 16H6V15H18V16M18 12H6V6H18V12Z" />
-            </svg>
-        </a>
-    </div>
-    <div id="menu-dropdown" class="menu-toggle">
-        <svg class="nav-icon" height="32px" viewBox="0 0 32 32" width="32px" xmlns="http://www.w3.org/2000/svg">
-            <path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/>
-        </svg>
-    </div>
+<div class="site-identity">
+    <a href="/" class="site-title">Ross Grattafiori<span>.</span></a>
+    <p class="site-role">Software engineer</p>
 </div>
-<div id="menu-block" class="menu-panel">
-    <hr>
-    <a href="/directory" class="menu-item">
-        <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <title>Directory</title>
-            <path d="M10,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V8C22,6.89 21.1,6 20,6H12L10,4Z" />
-        </svg>
-        <span class="label">Directory</span>
-    </a>
-    <a href="/posts" class="menu-item">
-        <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <title>Blog</title>
-            <path d="M3 3V21H21V3H3M18 18H6V17H18V18M18 16H6V15H18V16M18 12H6V6H18V12Z" />
-        </svg>
-        <span class="label">Posts</span>
-    </a>
-</div>
-
-<script>
-    const menuIcon = document.getElementById('menu-dropdown');
-    const menuBlock = document.getElementById('menu-block');
-
-    menuIcon.addEventListener('click', function() {
-        menuBlock.classList.toggle('is-open');
-    });
-</script>
+<nav class="header-nav" aria-label="Main navigation">
+    <a href="/about/"{{ if eq .Layout "about" }} aria-current="page"{{ end }}>About</a>
+    <a href="/finds/"{{ if eq .Layout "finds" }} aria-current="page"{{ end }}>Finds</a>
+    <a href="/archive/"{{ if or (eq .Layout "archive") (eq .Section "tags") }} aria-current="page"{{ end }}>Archive</a>
+</nav>

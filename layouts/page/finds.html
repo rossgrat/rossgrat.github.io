@@ -1,0 +1,20 @@
+{{ define "main" }}
+<p class="eyebrow">Lil' Treasures</p>
+<h1>{{ .Title }}</h1>
+{{ .Content }}
+<ul class="finds-list">
+    {{ range sort .Params.finds "added" "desc" }}
+    <li>
+        <div class="find-copy">
+            <h2><a href="{{ .url }}">{{ .title }}</a></h2>
+            <p>{{ .description }}</p>
+            <time datetime="{{ .added }}">Added {{ time.Format "Jan 2, 2006" .added }}</time>
+        </div>
+        {{ if .image }}
+        {{ $image := imageConfig (printf "static%s" .image) }}
+        <a class="find-preview" href="{{ .url }}"><img src="{{ .image }}" alt="{{ .image_alt }}" width="{{ $image.Width }}" height="{{ $image.Height }}" loading="lazy"></a>
+        {{ end }}
+    </li>
+    {{ end }}
+</ul>
+{{ end }}

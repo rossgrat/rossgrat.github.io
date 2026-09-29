@@ -1,12 +1,8 @@
-{{ define "main"}}
-<div>
-    <div>
-        <h1>{{ .Title }}</h1>
-    </div>
-    <div class="post-list">
-        {{ range .Paginator.Pages }}
-        <p class="post-list-item"><span class="post-date">{{ .Date.Format "2006-01-02" }}</span> <a href="{{ .RelPermalink }}">{{.Title }}</a></p>
-        {{ end }}
-    </div>
-</div>
+{{ define "main" }}
+<p class="eyebrow"><a href="/archive/topics/">Archive by topic</a></p>
+<h1>{{ .Title }}</h1>
+{{ .Content }}
+{{ $paginator := .Paginate .Pages.ByDate.Reverse }}
+{{ partial "post-list" $paginator.Pages }}
+{{ partial "pagination" $paginator }}
 {{ end }}
