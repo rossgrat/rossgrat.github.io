@@ -1,5 +1,5 @@
 {{ define "main" }}
-{{ $headshot := (resources.Get "images/headshot.jpeg").Resize "320x webp q85" }}
+{{ $headshot := ((resources.Get "images/headshot.jpeg").Crop "800x800 center").Resize "320x webp q85" }}
 <div class="about-heading">
     <div>
         <p class="eyebrow">Hello, world</p>
