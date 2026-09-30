@@ -2,6 +2,10 @@ baseURL = 'https://ross.grattafiori.dev/'
 languageCode = 'en-us'
 title = "Ross Grattafiori's Blog"
 ignoreFiles = ['/_templates/']
+enableGitInfo = true
+
+[frontmatter]
+  lastmod = ['lastmod', ':git', 'date', 'publishDate']
 
 [markup.highlight]
   style = "github-dark"

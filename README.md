@@ -36,3 +36,11 @@ Writing workflow:
 * **New post**: `Cmd-N` (in the `posts/` folder), type a filename, then `Cmd-Shift-T` → Enter to insert frontmatter. For a post with images, create a folder first (right-click → New folder) and put `index.md` inside — Hugo renders it as a page bundle and pasted images land next to it.
 * **Edit `finds.md`**: it sits at the vault root. Use Source mode to edit the `finds` list in the frontmatter. Each entry has a title, URL, added date, and description. Optional `image` and `image_alt` fields add a preview. Store preview files in `static/images/finds/` and use `/images/finds/filename.jpg` as the image path.
 * **Publish**: uncheck the `draft` property, then run "Git: Commit-and-sync" from the command palette (`Cmd-P` → type "sync"). Bind it to a hotkey in Settings → Hotkeys if you want one-key publish.
+
+Posts show the publication date from `publishDate`, with `date` as the fallback.
+Keep that date when you revise a post.
+The last commit that changes the post supplies its edit date.
+Posts show "Last edited" when the edit date is later than the publication date.
+An optional `lastmod` property overrides the automatic edit date.
+Use the same timestamp format as `date`.
+See [Hugo's date configuration](https://gohugo.io/configuration/front-matter/#dates) for the date sources.
