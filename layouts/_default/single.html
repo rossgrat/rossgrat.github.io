@@ -1,4 +1,14 @@
 {{ define "main" }}
+{{ $hasContents := and (eq .Section "posts") (gt (len (findRE "<a " .TableOfContents)) 0) }}
+<div class="post-layout">
+{{ if $hasContents }}
+<aside class="post-toc" aria-label="Table of contents">
+    <details>
+        <summary>On this page</summary>
+        {{ .TableOfContents }}
+    </details>
+</aside>
+{{ end }}
 <article>
     <header class="post-header">
         <p class="eyebrow">Blog</p>
@@ -16,10 +26,11 @@
         </div>
     </header>
     <div class="post-content">{{ .Content }}</div>
-    <nav class="post-nav" aria-label="More writing">
-        <a href="/archive/">View archive</a>
-        {{ with .PrevInSection }}<a href="{{ .RelPermalink }}">&larr; {{ .Title }}</a>{{ end }}
-        {{ with .NextInSection }}<a href="{{ .RelPermalink }}">{{ .Title }} &rarr;</a>{{ end }}
-    </nav>
+    {{ if eq .Section "posts" }}
+    <footer class="post-comments">
+        Comments? Send me an <a href="mailto:blog@grattafiori.dev">email!</a>
+    </footer>
+    {{ end }}
 </article>
+</div>
 {{ end }}
