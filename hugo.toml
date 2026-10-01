@@ -5,6 +5,7 @@ ignoreFiles = ['/_templates/']
 enableGitInfo = true
 
 [frontmatter]
+  date = ['publishDate', 'pubdate', 'published', 'date']
   lastmod = ['lastmod', ':git', 'date', 'publishDate']
 
 [markup.highlight]

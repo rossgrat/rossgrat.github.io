@@ -2,6 +2,8 @@ resources
 node_modules
 
 public
+.publication-dates.json
+__pycache__/
 
 .DS_Store
 
