@@ -1,9 +1,10 @@
 ---
 date: 2026-09-30T09:33:14-05:00
 draft: true
-title: ""
+title: A roadmap for this blog
 tags:
-  - none
+  - learning
+  - meta
 ---
 This blog has been pretty quiet since its inception. It's often difficult for me to find the time to sit down and polish a blog post over multiple sessions until I feel that it is of a high enough quality for me to release to the world. This isn't to say that I assume there are ravenous readers here, but I do link this site on my resume, and in job applications asking for a personal site, so there is always the possibility that some recruiter glanced over an article. And for that recruiter, I want that glance to look good!
 
