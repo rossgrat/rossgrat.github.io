@@ -1,7 +1,7 @@
 ---
 date: 2026-09-29T11:19:58-05:00
 draft: true
-title: ""
+title: Building a personalized, automated, job board
 tags:
   - none
 ---
