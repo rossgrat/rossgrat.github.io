@@ -5,6 +5,12 @@ title: ""
 tags:
   - none
 ---
+Ideas
+- AI workflow and rules of the road. What can I do and not do well? How to protect learning and career development
+- frontpair, getting my Audient id14 to send audio to Zoom on channels 1 & 2
+
+
+**Transparency**
 I'm going to start out this post with the qualifier that these are all untested and un-researched ideas. My career experience thus far is limited, and I haven't, until recently, really concerned myself with thoughts on interpersonal interactions between cross-functional teammates, or organizational culture.
 
 If I had to guess, I'd say the ideas that I'm going to present here bridge disciplines like organizational behavior, organizational sociology, business anthropology, and maybe even some social psychology. I know absolutely nothing about any of these areas of study, so you can value what follows against this lack of experience.

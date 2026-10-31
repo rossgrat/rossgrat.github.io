@@ -1,0 +1,52 @@
+%%{init: {"theme":"base","fontFamily":"Arial, sans-serif","themeVariables":{"fontFamily":"Arial, sans-serif","fontSize":"22px"},"architecture":{"iconSize":140,"fontSize":22,"idealEdgeLengthMultiplier":0.5,"nodeSeparation":35,"seed":1},"themeCSS":".architecture-service > g:first-child{transform:translate(70px,55px)} .architecture-service path.node-bkg{d:path(\"M12,30 H128 Q140,30 140,42 V98 Q140,110 128,110 H12 Q0,110 0,98 V42 Q0,30 12,30 Z\");stroke-dasharray:none!important;stroke-width:1.5px!important;fill-opacity:1;mix-blend-mode:multiply} .architecture-groups rect.node-bkg{fill:none!important;stroke:#b5c0cd!important;stroke-width:1.2px!important;stroke-dasharray:6 5!important;rx:14px;ry:14px} rect.node-bkg[id$=\"-group-server\"]{stroke:#64748b!important;stroke-width:1.8px!important;stroke-dasharray:none!important;rx:20px;ry:20px} .architecture-edges path{stroke:#64748b!important;stroke-width:1.6px!important} [id*=\"_anthropic_\"]{stroke:#b28a4c!important;stroke-dasharray:6 5} [id*=\"_grafana_\"]{stroke:#967cae!important;stroke-dasharray:6 5}[id$=\"-node-scrapers\"],[id$=\"-node-triage\"],[id$=\"-node-normalize\"],[id$=\"-node-filter\"],[id$=\"-node-classify\"],[id$=\"-node-db\"],[id$=\"-node-app\"]{fill:#e7f0fa!important;stroke:#416c96!important}[id$=\"-node-caddy\"],[id$=\"-node-grafana\"]{fill:#f0e9f8!important;stroke:#8967a7!important}[id$=\"-node-sources\"],[id$=\"-node-anthropic\"],[id$=\"-node-tunnel\"],[id$=\"-node-browser\"]{fill:#fff2db!important;stroke:#b78940!important} [id$=\"-service-tunnel\"] text{font-size:18px!important} [id$=\"-node-legendApp\"]{fill:#e7f0fa!important;stroke:#416c96!important} [id$=\"-node-legendInfra\"]{fill:#f0e9f8!important;stroke:#8967a7!important} [id$=\"-node-legendExternal\"]{fill:#fff2db!important;stroke:#b78940!important} rect.node-bkg[id$=\"-group-legend\"]{stroke:none!important}"}}%%
+architecture-beta
+    group server[Server]
+    group worker[Worker] in server
+    group postgresContainer in server
+    group apiContainer in server
+    group caddyContainer in server
+    group lgtm in server
+
+    service sources[Job boards]
+    service scrapers[Scrapers] in worker
+    service triage[Triage] in worker
+    service normalize[Normalize] in worker
+    service filter[Filter] in worker
+    service classify[Classify] in worker
+    service db[PostgreSQL] in postgresContainer
+    service app[Web app] in apiContainer
+    service caddy[Caddy] in caddyContainer
+    service grafana[Grafana] in lgtm
+    service tunnel[Cloudflare Tunnel]
+    service browser[Browser]
+    service anthropic[Anthropic]
+
+    group legend[Legend]
+    service legendApp[Application] in legend
+    service legendInfra[Server infra] in legend
+    service legendExternal[External] in legend
+
+    sources:R --> L:scrapers
+    scrapers:R --> L:triage
+    triage:R --> L:normalize
+    normalize:R --> L:filter
+    filter:R --> L:classify
+    classify{group}:R <--> L:db
+    db:R --> L:app
+    app:R --> L:caddy
+    caddy:R --> L:tunnel
+    tunnel:R --> L:browser
+    triage:B --> L:anthropic
+    normalize:B --> T:anthropic
+    classify:B --> R:anthropic
+    app:B --> T:grafana
+    classify{group}:B --> L:grafana
+
+    align row sources scrapers triage normalize filter classify db app caddy tunnel browser
+    align column normalize anthropic
+
+
+    align row anthropic legendApp legendInfra legendExternal
+    align column db legendApp
+    align column app grafana legendInfra
+    align column caddy legendExternal

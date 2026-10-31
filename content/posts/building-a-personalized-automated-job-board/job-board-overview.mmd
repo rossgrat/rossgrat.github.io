@@ -1,0 +1,41 @@
+%%{init: {"theme":"base","fontFamily":"Arial, sans-serif","themeVariables":{"fontFamily":"Arial, sans-serif","fontSize":"18px"},"architecture":{"iconSize":120,"fontSize":18,"idealEdgeLengthMultiplier":0.75,"nodeSeparation":45,"seed":1},"themeCSS":".architecture-service > g:first-child{transform:translate(60px,60px)} .architecture-service path.node-bkg{stroke-dasharray:none!important;stroke-width:1.5px!important;fill-opacity:0.16} .architecture-groups rect.node-bkg{fill:none!important;stroke:#94a3b8!important;stroke-width:1.5px!important;stroke-dasharray:6 4!important} rect.node-bkg[id$=\"-group-server\"]{stroke:#64748b!important;stroke-width:2px!important;stroke-dasharray:none!important} .architecture-edge path,.architecture-edges path{stroke:#596b79!important} [id*=\"_anthropic_\"],[id*=\"_grafana_\"]{stroke-dasharray:5 4}[id$=\"-node-scrapers\"],[id$=\"-node-triage\"],[id$=\"-node-normalize\"],[id$=\"-node-filter\"],[id$=\"-node-classify\"],[id$=\"-node-db\"],[id$=\"-node-app\"]{fill:#3a7098!important;stroke:#3a7098!important}[id$=\"-node-caddy\"],[id$=\"-node-grafana\"]{fill:#8869ab!important;stroke:#8869ab!important}[id$=\"-node-sources\"],[id$=\"-node-anthropic\"],[id$=\"-node-tunnel\"],[id$=\"-node-browser\"]{fill:#b97722!important;stroke:#b97722!important} [id$=\"-service-tunnel\"] text{font-size:16px!important}"}}%%
+architecture-beta
+    group server[Server]
+    group worker[Worker] in server
+    group postgresContainer in server
+    group apiContainer in server
+    group caddyContainer in server
+    group lgtm in server
+
+    service sources[Job boards]
+    service scrapers[Scrapers] in worker
+    service triage[Triage] in worker
+    service normalize[Normalize] in worker
+    service filter[Filter] in worker
+    service classify[Classify] in worker
+    service db[PostgreSQL] in postgresContainer
+    service app[Web app] in apiContainer
+    service caddy[Caddy] in caddyContainer
+    service grafana[Grafana] in lgtm
+    service tunnel[Cloudflare Tunnel]
+    service browser[Browser]
+    service anthropic[Anthropic]
+
+    sources:R --> L:scrapers
+    scrapers:R --> L:triage
+    triage:R --> L:normalize
+    normalize:R --> L:filter
+    filter:R --> L:classify
+    classify{group}:R <--> L:db
+    db:R --> L:app
+    app:R --> L:caddy
+    caddy:R --> L:tunnel
+    tunnel:R --> L:browser
+    triage:B --> T:anthropic
+    normalize:B --> T:anthropic
+    classify:B --> T:anthropic
+    app:B --> T:grafana
+    classify{group}:B --> L:grafana
+
+    align row sources scrapers triage normalize filter classify db app caddy tunnel browser
+    align column normalize anthropic
