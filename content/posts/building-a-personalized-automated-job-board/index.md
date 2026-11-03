@@ -217,7 +217,7 @@ I think this project is pretty cool, but there is certainly more work that can b
 - The UX could be quite a bit better. It does not yet provide a focused job application experience. Rather, it feels like a disjointed collection of data.
 - It would be great to use LLMs to automate applying to jobs at the click of a button, especially for sites with simple job application processes like Greenhouse and Ashby. The line to walk here is how to make the LLM only apply to the jobs, while retaining any application content and answers to be my own.
 
-That's it! Thanks for reading. The code is [here](https://github.com/rossgrat/job-board-v2) if you want to take a look. Feel free to drop me any comments at blog@grattafiori.dev.
+That's it! Thanks for reading. The code is [here](https://github.com/rossgrat/job-board-v2) if you want to take a look. Feel free to drop me any comments at my email below!
 
 – Ross
 
