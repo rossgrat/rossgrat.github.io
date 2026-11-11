@@ -11,18 +11,20 @@ Run `make test` to test publication dates.
 
 ## Analytics
 
-Production builds use self-hosted GoatCounter at `https://stats.grattafiori.dev`.
+Production builds use self-hosted Umami at `https://stats.grattafiori.dev`.
 Local Hugo previews omit tracking.
-The pinned 2.7.0 script lives in `assets/js/vendor/` with its ISC license.
-The analytics partial loads it after page load, during browser idle time when available.
-The blog does not wait for the analytics server to respond.
+The loader sends one page view after page load, during browser idle time when available.
+It omits URL queries and fragments and respects Do Not Track and Global Privacy Control.
+The blog remains usable when the analytics server or script is unavailable.
 
-Visit `https://ross.grattafiori.dev/#toggle-goatcounter` to exclude your browser from counts.
-Wait for the confirmation. Visit that URL again to enable tracking.
+To exclude your browser, open `https://ross.grattafiori.dev/#toggle-analytics`.
+Make sure that the message says tracking is disabled.
+Repeat this on each browser and device that you use.
+Opening the URL again enables tracking in that browser.
+Existing GoatCounter browser exclusions transfer to Umami on the next visit.
 
-The service, database, and deployment instructions live in the
-[potatoserver repository](https://github.com/rossgrat/potatoserver/blob/main/docs/goatcounter.md).
-See the [GoatCounter integration documentation](https://www.goatcounter.com/help/js) before upgrading the script.
+The [infrastructure guide](https://github.com/rossgrat/potatoserver/blob/main/docs/umami.md) covers deployment, data collection, and backups.
+See the [Umami tracker documentation](https://docs.umami.is/docs/tracker-configuration) before changing the loader.
 
 ## Writing posts with Pages CMS
 
