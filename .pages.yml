@@ -13,7 +13,7 @@ content:
     path: content/posts
     format: yaml-frontmatter
     subfolders: true
-    exclude: ["**/_index.md", "_index.md", "_templates/**"]
+    exclude: ["_index.md", "_templates"]
     filename:
       template: "{primary}.md"
       field: create
