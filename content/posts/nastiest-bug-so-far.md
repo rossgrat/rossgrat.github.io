@@ -23,7 +23,7 @@ In the early spring of 2024, I encountered quite the mysterious bug that caused 
 
 Before I explain the bug, I am going to lay it out so you can have a guess. I have recreated the bug in an abbreviated version of the culprit code below. I have omitted the SQL statements, error checking, and database connection pool initialization. All you need to know, besides the code below, is that the Postgres database connection pool is initialized via the `jackc/pgxpool/v4` package and is shared globally among all of the concurrent server threads. Queries are made via the `jackc/pgx` package.
 
-{{< highlight golang >}}
+```go
 rows, _ := ConnPool.Query()
 for rows.Next(){
    // Scan and process row
@@ -32,11 +32,11 @@ for rows.Next(){
       // Scan and process new row
    }
 }
-{{< /highlight >}}
+```
 
 Do you see the problem? Maybe? What if I rewrite it with mutexes?
 
-{{< highlight golang >}}
+```go
 mutex.Lock()
 for i := 0; i < 1000; i++ {
    mutex.Lock()
@@ -46,15 +46,15 @@ for i := 0; i < 1000; i++ {
    mutex.Unlock()
 }
 mutex.Unlock()
-{{< /highlight >}}
+```
 
 This is indeed a deadlock caused by a sneaky race condition.
 
 Upon creation, each database pool accepts a config object that defines important things, but the particularly relevant field for my case was the maximum number of connections field (`MaxConns`). The definition of this from the `pgxpool` package is below.
-{{< highlight golang >}}
+```go
 	// MaxConns is the maximum size of the pool. The default is the greater of 4 or runtime.NumCPU().
 	MaxConns int32
-{{< /highlight >}}
+```
 
 The production monolith has only four CPU cores, so the maximum number of database connections is 4.
 
@@ -67,7 +67,7 @@ You can see in the example that there are two `ConnPool.Query()` calls, with one
 In the overall context of this bug in our server; on quick, subsequent calls to the endpoint that invoked this database code, four separate threads would each take a database connection before any of them could grab a second connection. This would effectively lock up the database layer, because each of these threads is now waiting for a second database connection, while holding onto their own initial connection.
 
 This fix was a simple one.
-{{< highlight golang >}}
+```go
 rows, _ := ConnPool.Query()
 var data []any
 for rows.Next(){
@@ -78,7 +78,7 @@ newRows, _ := ConnPool.Query()
 for newRows.next() {
    // Scan and process new rows using data
 }
-{{< /highlight >}}
+```
 
 Thanks for reading! I've also attached some additional links on database connection pools if you want to read a little more about why they are used.
 - [StackOverflow](https://stackoverflow.com/questions/4041114/what-is-database-pooling)

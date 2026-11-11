@@ -7,7 +7,7 @@ tags:
   - technical
 ---
 
-![Laptop lid](laptop-lid.webp)
+![Laptop lid](/images/posts/laptop-lid/laptop-lid.webp)
 
 I recently turned an old laptop into a home server, and that experience made me think of [the picture above](https://www.reddit.com/r/ProgrammerHumor/comments/z8qfrd/startups_be_like/) [^1]. If I want my server/laptop quietly sitting in a closet or under my desk, I will have to shut the lid. How can I do that without turning the computer off?
 
@@ -24,9 +24,9 @@ HandleLidSwitchDocked=ignore
 What are we doing here? We're just telling `systemd-logind`, the `systemd` daemon that manages user sessions and "seats" (where a "seat" is a collection of hardware assigned to users), that we don't want it to do anything when it sees a `SW_LID` event appear on the `/dev/input/event*` device file.
 
 Once these changes are made, you can apply the new `systemd-logind` configuration file with
-{{< highlight bash >}}
+```bash
 $ sudo service systemd-logind restart
-{{< /highlight >}}
+```
 
 Congrats! Now you can close the lid on your self-hosted Linux servers at your new startup.
 

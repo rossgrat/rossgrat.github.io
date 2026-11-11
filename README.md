@@ -24,23 +24,32 @@ The service, database, and deployment instructions live in the
 [potatoserver repository](https://github.com/rossgrat/potatoserver/blob/main/docs/goatcounter.md).
 See the [GoatCounter integration documentation](https://www.goatcounter.com/help/js) before upgrading the script.
 
-## Writing posts with Obsidian
+## Writing posts with Pages CMS
 
-One-time setup on a new macOS machine:
+Open [Pages CMS](https://cms.grattafiori.dev) on your phone or laptop.
+Sign in with your `rossgrat` GitHub account.
+Select `rossgrat/rossgrat.github.io`, `main`, and Blog posts.
 
-1. `brew install --cask obsidian`
-2. Open Obsidian → "Open folder as vault" → `~/repos/rossgrat.github.io/content`
-3. Trust the vault when prompted
-4. Settings → Community plugins → Browse → install "Obsidian Git"
-5. Settings → Core plugins → enable "Templates" (if not already enabled — the committed `core-plugins.json` turns it on by default)
+1. Create a post.
+2. Enter its title.
+3. Keep Draft enabled while you write.
+4. Write in the visual editor or use the Markdown switch.
+5. Use the image picker to upload or select images.
+6. Save the post.
+7. When the post is ready, turn Draft off.
+8. Save again to publish.
 
-The committed `content/.obsidian/` ships with Templates pointed at `posts/_templates`, date format set to `YYYY-MM-DDTHH:mm:ssZ`, and the `Cmd-Shift-T` hotkey bound to "Insert template".
+Each save commits to `main` and starts the GitHub Pages build.
+Drafts remain visible in this public GitHub repository, but the build excludes them from the blog.
 
-Writing workflow:
+Posts use standard Markdown in `content/posts/<slug>.md`.
+Keep the filename when editing a post to preserve its URL.
+Images live under `static/images/posts` and use `/images/posts/...` links.
+Diagram source files live under `assets/diagrams/posts`.
+The [infrastructure guide](https://github.com/rossgrat/potatoserver/blob/main/docs/pages-cms.md) covers deployment and backups.
 
-* **New post**: `Cmd-N` (in the `posts/` folder), type a filename, then `Cmd-Shift-T` → Enter to insert frontmatter. For a post with images, create a folder first (right-click → New folder) and put `index.md` inside — Hugo renders it as a page bundle and pasted images land next to it.
-* **Edit `finds.md`**: it sits at the vault root. Use Source mode to edit the `finds` list in the frontmatter. Each entry has a title, URL, added date, and description. Optional `image` and `image_alt` fields add a preview. Store preview files in `static/images/finds/` and use `/images/finds/filename.jpg` as the image path.
-* **Publish**: uncheck the `draft` property, then run "Git: Commit-and-sync" from the command palette (`Cmd-P` → type "sync"). Bind it to a hotkey in Settings → Hotkeys if you want one-key publish.
+Other content, such as `content/finds.md`, remains editable locally.
+Find previews use `static/images/finds/` and `/images/finds/filename.jpg` links.
 
 The build derives each publication date from the first Git commit where `draft` is false or absent.
 The date stays fixed through later edits and Git-detected renames.

@@ -31,7 +31,7 @@ Using those data structures, I attempted to implement a backtracking solution th
 
 The initial solution looked something like this:
 
-{{< highlight pseudocode >}}
+```text
 generate all combinations for N players choose 
 backtrack(combinations, used_players_for_round, used_combinations)
    if used_combinations equals combinations length
@@ -46,7 +46,7 @@ backtrack(combinations, used_players_for_round, used_combinations)
          remove team from table
          remove combination from used_combinations
          remove players from used_players_for_round
-{{< / highlight >}}
+```
 
 This did not work. 
 
@@ -61,7 +61,7 @@ The next idea I tried was a usage matrix. I created an array of sets for each ot
 
 The solution looked something like this:
 
-{{< highlight pseudocode >}}
+```text
 while we can partner players from the usage matrix
    sort player IDs by games played
    while all tables in a round not full
@@ -72,7 +72,7 @@ while we can partner players from the usage matrix
                add team to table
                add partner to player used partners
                add player to partner used partners
-{{< / highlight >}}
+```
 
 That's a lot of nested loops. 
 

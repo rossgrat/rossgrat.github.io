@@ -12,7 +12,7 @@ content:
     type: collection
     path: content/posts
     format: yaml-frontmatter
-    subfolders: true
+    subfolders: false
     exclude: ["_index.md", "_templates"]
     filename:
       template: "{primary}.md"

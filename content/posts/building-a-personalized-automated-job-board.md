@@ -43,7 +43,7 @@ So I built my own. It's not perfect, but I consider it a step in the right direc
 
 Here's a high-level overview of the system.
 
-![Job Board Overview](job-board-overview.png)
+![Job Board Overview](/images/posts/building-a-personalized-automated-job-board/job-board-overview.png)
 
 The job board consists of a Go worker, which is responsible for ingesting and classifying the jobs, and a Go web service, which is responsible for serving the jobs in a UI. Anthropic's small LLMs are used in the classification pipeline, self-hosted Grafana collects telemetry and metrics, and the whole system runs on an old laptop, made available to the internet by Caddy and a Cloudflare Tunnel.
 
@@ -180,32 +180,32 @@ Some screenshots of the UI are below.
 
 The first screenshot is of the login page. I could definitely put this behind my Tailscale network, but for now it's available at https://job.grattafiori.dev via a Cloudflare Tunnel behind this password-protected login page.
 
-![Login Page](01-login.png)
+![Login Page](/images/posts/building-a-personalized-automated-job-board/01-login.png)
 
 Below is the main dashboard. There are two sections here. The first is "New". The second is "Tabled", as in I'll get to it later. You can see the shape of the job card in this dashboard. The fields populated in normalization and classification are prominently displayed, along with the company name and logo.
 
-![Home](02-home.png)
+![Home](/images/posts/building-a-personalized-automated-job-board/02-home.png)
 
 The "Browse" page is similar to the dashboard, but with dropdown filters, and the ability to see jobs that didn't make it all the way through to classification, including jobs dumped immediately as non-technical.
 
-![Browse](03-browse.png)
+![Browse](/images/posts/building-a-personalized-automated-job-board/03-browse.png)
 
 Clicking "Detail" on any job brings up the "Job Detail" page. This page is directionally more aligned with examining pipeline stage outputs than providing a usable overview of the job itself. The underlying job posting is linked to the title in the job card, and so the actual employment site is the intended location for learning more about the job.
 
-![Job Detail](04-job-detail.png)
+![Job Detail](/images/posts/building-a-personalized-automated-job-board/04-job-detail.png)
 
 Selecting "Review" opens up a review modal, where a new entry can be sorted into applied, tabled or rejected. If rejected is selected, an optional "Reason" box will appear. The unused eval functionality is also present here.
 
-![Review Modal](07-home-review-modal.png)
+![Review Modal](/images/posts/building-a-personalized-automated-job-board/07-home-review-modal.png)
 
 
 The "Companies" page lists all companies with their favicon, the fetcher used to retrieve them, and whether or not they're active, with new jobs being loaded into the pipeline.
 
-![Companies](05-companies.png)
+![Companies](/images/posts/building-a-personalized-automated-job-board/05-companies.png)
 
 The "Metrics" page gives a simple chart about the number of jobs at each company, and in what pipeline stage they ended up.
 
-![Metrics](06-metrics.png)
+![Metrics](/images/posts/building-a-personalized-automated-job-board/06-metrics.png)
 
 # Wrap-up
 

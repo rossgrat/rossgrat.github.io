@@ -1,7 +1,7 @@
 ---
 date: 2026-09-29T11:17:28-05:00
 draft: true
-title: ""
+title: Ideas
 tags:
   - none
 ---
