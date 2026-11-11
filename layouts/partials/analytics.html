@@ -1,14 +1,41 @@
 {{ if and hugo.IsProduction (not hugo.IsServer) }}
-{{ $tracker := resources.Get "js/vendor/goatcounter-2.7.0.js" | minify | fingerprint }}
 <script>
     window.addEventListener('load', function () {
+        try {
+            if (localStorage.getItem('skipgc') === 't') {
+                localStorage.setItem('umami.disabled', '1');
+                localStorage.removeItem('skipgc');
+            }
+            if (location.hash === '#toggle-analytics') {
+                if (localStorage.getItem('umami.disabled')) {
+                    localStorage.removeItem('umami.disabled');
+                    alert('Analytics tracking is now ENABLED in this browser.');
+                } else {
+                    localStorage.setItem('umami.disabled', '1');
+                    alert('Analytics tracking is now DISABLED in this browser.');
+                }
+                return;
+            }
+            if (localStorage.getItem('umami.disabled')) return;
+        } catch (error) {
+            return;
+        }
+        if (navigator.globalPrivacyControl || navigator.doNotTrack === '1' || window.doNotTrack === '1') return;
+
         function loadTracker() {
             var script = document.createElement('script');
-            script.src = '{{ $tracker.RelPermalink }}';
+            script.src = 'https://stats.grattafiori.dev/script.js';
             script.async = true;
             script.fetchPriority = 'low';
-            script.dataset.goatcounter = 'https://stats.grattafiori.dev/count';
-            script.dataset.goatcounterSettings = '{"no_events":true}';
+            script.dataset.websiteId = '8bbb85d9-34c5-4d84-b595-ecce3cba7846';
+            script.dataset.autoTrack = 'false';
+            script.dataset.performance = 'false';
+            script.dataset.doNotTrack = 'true';
+            script.dataset.excludeSearch = 'true';
+            script.dataset.excludeHash = 'true';
+            script.onload = function () {
+                if (window.umami) window.umami.track();
+            };
             document.head.appendChild(script);
         }
         if ('requestIdleCallback' in window) {
