@@ -1,0 +1,57 @@
+media:
+  - name: post_images
+    label: Post images
+    input: static/images/posts
+    output: /images/posts
+    extensions: [jpg, jpeg, png, webp, gif, svg]
+    rename: safe
+
+content:
+  - name: posts
+    label: Blog posts
+    type: collection
+    path: content/posts
+    format: yaml-frontmatter
+    subfolders: true
+    exclude: ["**/_index.md", "_index.md", "_templates/**"]
+    filename:
+      template: "{primary}.md"
+      field: create
+    view:
+      primary: title
+      fields: [title, draft, date]
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: draft
+        label: Draft
+        type: boolean
+        default: true
+        description: Keep enabled until the post is ready to appear on the blog.
+      - name: date
+        label: Created
+        type: date
+        options:
+          time: true
+          format: "yyyy-MM-dd'T'HH:mm:ssxxx"
+      - name: tags
+        label: Tags
+        type: string
+        list: true
+      - name: body
+        label: Body
+        type: rich-text
+        options:
+          format: markdown
+          media: post_images
+          switcher: true
+
+settings:
+  content:
+    merge: true
